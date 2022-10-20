@@ -50,7 +50,7 @@
 
     /** Typography + Themes **/
     "workbench.colorTheme": "Night Owl (No Italics)",
-    "editor.fontFamily": "-MonoLisa, Dank Mono, JetBrainsMono Nerd Font",
+    "editor.fontFamily": "MonoLisa, Roboto Mono, SF Mono, 'Dank Mono', JetBrainsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
     // "editor.fontSize": 18,
     "editor.fontSize": 22,
     "editor.fontLigatures": true,
@@ -129,9 +129,16 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+
     "prettier.requireConfig": true,
     "prettier.useEditorConfig": false,
 
+    /* Better comments */
+    "better-comments.multilineComments": true,
 
     // eslint
     "eslint.validate": [
@@ -149,6 +156,8 @@
     // style and add these CSS selectors to clean it up further.
     "window.menuBarVisibility": "toggle",
     "customizeUI.titleBar": "inline",
+    // For windows set titleBarStyle to custom and for mac and linux set it to native.
+    // For kde based distro, use "native" and for gnome use "custom".
     "window.titleBarStyle": "native",
     "customizeUI.stylesheet": {
         ".editor .title": "background: transparent !important;",
@@ -170,5 +179,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.cursorSmoothCaretAnimation": true,
-    "leetcode.endpoint": "leetcode-cn"
+    "explorer.compactFolders": false,
+    "editor.guides.indentation": false,
+    "window.title": "${activeEditorShort}"
 }
