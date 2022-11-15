@@ -1,5 +1,7 @@
 [
-    /** Panels */
+    /**
+    * Panels
+    */
     {
         "key": "ctrl+k ctrl+e",
         "command": "workbench.view.explorer"
@@ -14,7 +16,7 @@
     },
     {
         "key": "ctrl+k ctrl+x",
-        "command": "workbench.extensions.action.showInstalledExtensions"
+        "command": "workbench.extensions.action.showPopularExtensions"
     },
     {
         "key": "ctrl+k ctrl+b",
@@ -41,11 +43,11 @@
             "value": [
                 {
                     "editor.fontSize": 18,
-                    "editor.lineHeight": 52,
+                    "editor.lineHeight": 64,
                 },
                 {
-                    "editor.fontSize": 15,
-                    "editor.lineHeight": 0,
+                    "editor.fontSize": 16,
+                    "editor.lineHeight": 28,
                 }
             ]
         }

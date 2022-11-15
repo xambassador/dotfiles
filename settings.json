@@ -10,21 +10,13 @@
     "diffEditor.renderSideBySide": false,
     "editor.snippetSuggestions": "top",
     "editor.detectIndentation": false,
-    "window.nativeFullScreen": false,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-
-    /** Hide Everything **/
-    "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "right",
     "workbench.statusBar.visible": false,
     "workbench.editor.showTabs": false,
-    "editor.renderIndentGuides": false,
     "editor.minimap.enabled": false,
-	"editor.lineNumbers": "off",
-
-    /** Silence The Noise **/
-    "breadcrumbs.enabled": false,
+    "editor.lineNumbers": "off",
     "scm.diffDecorations": "none",
     "editor.hover.enabled": false,
     "editor.matchBrackets": "never",
@@ -49,19 +41,21 @@
     "editor.renderWhitespace": "none",
 
     /** Typography + Themes **/
-    "workbench.colorTheme": "Night Owl (No Italics)",
+    "workbench.colorTheme": "Palenight Theme",
+    "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "MonoLisa, Roboto Mono, SF Mono, 'Dank Mono', JetBrainsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
-    // "editor.fontSize": 18,
-    "editor.fontSize": 22,
+    "editor.fontSize": 18,
     "editor.fontLigatures": true,
-    // "editor.lineHeight": 46,
-    "editor.lineHeight": 64,
+    "editor.lineHeight": 82,
     "editor.suggestFontSize": 15,
     "editor.suggestLineHeight": 28,
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.lineHeight": 1.5,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.lineHeight": 2,
     "editor.smoothScrolling": true,
     "editor.suggestSelection": "first",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.guides.indentation": false,
+    "editor.inlineSuggest.enabled": true,
 
     /** Find **/
     "search.useIgnoreFiles": false,
@@ -85,7 +79,8 @@
     "emmet.includeLanguages": {
         "blade": "html",
         "vue-html": "html",
-        "vue": "html"
+        "vue": "html",
+        "javascript": "javascriptreact"
     },
     "files.associations": {
         ".php_cs": "php",
@@ -103,6 +98,10 @@
         "editor.formatOnSave": true
     },
     "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
@@ -129,13 +128,25 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
+    "[pug]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-
-
     "prettier.requireConfig": true,
     "prettier.useEditorConfig": false,
+
+    "typescript.updateImportsOnFileMove.enabled": "always",
 
     /* Better comments */
     "better-comments.multilineComments": true,
@@ -158,7 +169,7 @@
     "customizeUI.titleBar": "inline",
     // For windows set titleBarStyle to custom and for mac and linux set it to native.
     // For kde based distro, use "native" and for gnome use "custom".
-    "window.titleBarStyle": "native",
+    "window.titleBarStyle": "custom",
     "customizeUI.stylesheet": {
         ".editor .title": "background: transparent !important;",
         ".editor .title .label-container": "visibility: hidden;",
@@ -174,12 +185,19 @@
         ".editor .scrollbar:hover .slider": "visibility: initial",
         // Change cursor color.
         ".monaco-editor .cursor": "background: linear-gradient(to bottom, #7f00ff, #e100ff) !important; color: #292D3E !important",
-        "div.title.show-file-icons.title-border-bottom": "display: none !important"
+        "div.title.show-file-icons.title-border-bottom": "display: none !important",
+        // Remove vscode icon on top left corner
+        "div.titlebar-container > a.window-appicon": "opacity: 0 !important",
+        // Hide title
+        "div.titlebar-container > div.window-title": "opacity: 0 !important",
+        // Hide layout controls menu
+        "div.titlebar-container > div.layout-controls-container.show-layout-control": "opacity: 0 !important",
+        // Remove bottom border of titlebar
+        ".monaco-workbench .part.titlebar": "border-bottom: none !important"
     },
-    "workbench.iconTheme": "material-icon-theme",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "editor.cursorSmoothCaretAnimation": true,
-    "explorer.compactFolders": false,
-    "editor.guides.indentation": false,
-    "window.title": "${activeEditorShort}"
+    "git.autofetch": true,
+    "window.commandCenter": false,
+    "workbench.activityBar.visible": false,
+    "breadcrumbs.enabled": false,
+    "explorer.compactFolders": false
 }
