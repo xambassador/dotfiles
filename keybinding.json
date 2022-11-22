@@ -43,7 +43,7 @@
             "value": [
                 {
                     "editor.fontSize": 18,
-                    "editor.lineHeight": 64,
+                    "editor.lineHeight": 82,
                 },
                 {
                     "editor.fontSize": 16,
@@ -286,3 +286,4 @@
         "when": "notificationToastsVisible"
     }
 ]
+
