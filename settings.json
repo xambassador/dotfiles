@@ -41,14 +41,12 @@
     "editor.renderWhitespace": "none",
 
     /** Typography + Themes **/
-    "workbench.colorTheme": "Palenight Theme",
+    "workbench.colorTheme": "Night Owl (No Italics)",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "-MonoLisa, -Roboto Mono, SF Mono, 'Dank Mono', JetBrainsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 18,
+    "editor.fontFamily": "-MonoLisa, -Roboto Mono, SF Mono, 'Dank Mono', JetBrainsMono Nerd Font, Space Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 20,
     "editor.fontLigatures": true,
     "editor.lineHeight": 82,
-    // "editor.fontSize": 24,
-    // "editor.lineHeight": 46,
     "editor.suggestFontSize": 15,
     "editor.suggestLineHeight": 28,
     "terminal.integrated.fontSize": 16,
@@ -72,7 +70,8 @@
         "**/composer.lock": true,
         "**/package-lock.json": true,
         "storage": true,
-        ".phpunit.result.cache": true
+        ".phpunit.result.cache": true,
+        ".next": true
     },
 
     /** Code **/
@@ -145,6 +144,10 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma",
+        "editor.formatOnSave": true
+    },
     "prettier.requireConfig": true,
     "prettier.useEditorConfig": false,
 
@@ -171,7 +174,8 @@
     "customizeUI.titleBar": "inline",
     // For windows set titleBarStyle to custom and for mac and linux set it to native.
     // For kde based distro, use "native" and for gnome use "custom".
-    "window.titleBarStyle": "custom",
+    "window.titleBarStyle": "native",
+    "vscode_custom_css.imports": ["file:///home/yash/Documents/custom-vscode-css.css"],
     "customizeUI.stylesheet": {
         ".editor .title": "background: transparent !important;",
         ".editor .title .label-container": "visibility: hidden;",
@@ -202,6 +206,12 @@
     "workbench.activityBar.visible": false,
     "breadcrumbs.enabled": false,
     "explorer.compactFolders": false,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "cpp": true
+    }
 }
-

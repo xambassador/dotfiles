@@ -13,6 +13,8 @@ My VS Code settings.
 - Path Intellisense
 - Prettier
 - Rainbow Brackets
+- Better Comments
+- Custom CSS and JS loader
 
 # Theme
 - Night Owl
