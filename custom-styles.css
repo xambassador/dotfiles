@@ -3,62 +3,77 @@
 /* Update the path in vscode_custom_css.imports in settings.json. That path is where you save this file.*/
 
 .editor .title {
-    background: transparent !important;
+  background: transparent !important;
 }
 
 .editor .title .label-container {
-    visibility: hidden !important;
+  visibility: hidden !important;
 }
 
 .editor .title .actions-container .action-item a {
-    visibility: hidden !important;
+  visibility: hidden !important;
 }
 
 .editor .title .actions-container .action-item a[title=\"Open Settings (UI)\"] {
-    visibility: initial;
+  visibility: initial;
 }
 
-.editor .title .actions-container .action-item a[title=\"Open Settings (JSON)\"] {
-    visibility: initial;
+.editor
+  .title
+  .actions-container
+  .action-item
+  a[title=\"Open Settings (JSON)\"] {
+  visibility: initial;
 }
 
 .editor .title .actions-container {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .editor .scrollbar .slider {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .editor .scrollbar:hover .slider {
-    visibility: initial;
+  visibility: initial;
 }
 
 .monaco-editor .cursor {
-    background: linear-gradient(to bottom, #7f00ff, #e100ff) !important;
-    color: #292D3E !important;
+  background: linear-gradient(to bottom, #7f00ff, #e100ff) !important;
+  color: #292d3e !important;
 }
 
 div.title.show-file-icons.title-border-bottom {
-    display: none !important;
+  display: none !important;
 }
 
 .titlebar > div.titlebar-container > a {
-    opacity: 0 !important;
+  opacity: 0 !important;
 }
 
 .titlebar > div.titlebar-container > div.window-title {
-    opacity: 0 !important;
+  opacity: 0 !important;
 }
 
-.titlebar > div.titlebar-container > div.layout-controls-container.show-layout-control {
-    display: none !important;
+.titlebar
+  > div.titlebar-container
+  > div.layout-controls-container.show-layout-control {
+  display: none !important;
 }
 
 .titlebar {
-    border-bottom: none !important;
+  border-bottom: none !important;
 }
 
 .linux {
-    font-family: "SF Mono, Fira Code Mono, system-ui,Ubuntu,Droid Sans", sans-serif !important;
+  font-family: "SF Mono, Fira Code Mono, system-ui,Ubuntu,Droid Sans",
+    sans-serif !important;
+}
+
+.monaco-editor .scroll-decoration {
+    box-shadow: none !important;
+}
+
+div.monaco-scrollable-element > div.split-view-container > div > div > div.title.show-file-icons.title-border-bottom {
+    display: none !important;
 }
