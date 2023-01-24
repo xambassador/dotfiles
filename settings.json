@@ -85,7 +85,13 @@
     },
     "files.associations": {
         ".php_cs": "php",
-        ".php_cs.dist": "php"
+        ".php_cs.dist": "php",
+        "*.env.development": "env",
+        "*.env.production": "env",
+        "*.env.testing": "env",
+        "*.env.example": "env",
+        "*.env": "env",
+        "*.env.local": "env",
     },
 
     /** PHP **/
@@ -164,6 +170,8 @@
         "typescriptreact"
     ],
 
+    // move terminal panel to the left
+    "workbench.panel.defaultLocation": "left",
 
     /** Window Settings **/
     // Note for Windows users:
@@ -171,36 +179,10 @@
     // The best you can do is use the native "Windows" window
     // style and add these CSS selectors to clean it up further.
     "window.menuBarVisibility": "toggle",
-    "customizeUI.titleBar": "inline",
     // For windows set titleBarStyle to custom and for mac and linux set it to native.
     // For kde based distro, use "native" and for gnome use "custom".
     "window.titleBarStyle": "native",
     "vscode_custom_css.imports": ["file:///home/yash/Documents/custom-vscode-css.css"],
-    "customizeUI.stylesheet": {
-        ".editor .title": "background: transparent !important;",
-        ".editor .title .label-container": "visibility: hidden;",
-        // Hide top-right buttons
-        ".editor .title .actions-container .action-item a": "visibility: hidden;",
-        // Show top-right "settings goto icon"
-        ".editor .title .actions-container .action-item a[title=\"Open Settings (UI)\"]": "visibility: initial;",
-        ".editor .title .actions-container .action-item a[title=\"Open Settings (JSON)\"]": "visibility: initial;",
-        // Make it the "right-most" icon.
-        ".editor .title .actions-container": "flex-direction: row-reverse;",
-        // Only show the scrollbar on hover.
-        ".editor .scrollbar .slider": "visibility: hidden",
-        ".editor .scrollbar:hover .slider": "visibility: initial",
-        // Change cursor color.
-        ".monaco-editor .cursor": "background: linear-gradient(to bottom, #7f00ff, #e100ff) !important; color: #292D3E !important",
-        "div.title.show-file-icons.title-border-bottom": "display: none !important",
-        // Remove vscode icon on top left corner
-        ".titlebar > div.titlebar-container > a": "opacity: 0 !important",
-        // Hide title
-        ".titlebar > div.titlebar-container > div.window-title": "opacity: 0 !important",
-        // Hide layout controls menu
-        ".titlebar > div.titlebar-container > div.layout-controls-container.show-layout-control": "display: none !important",
-        // Remove bottom border of titlebar
-        ".titlebar": "border-bottom: none !important"
-    },
     "git.autofetch": true,
     "window.commandCenter": false,
     "workbench.activityBar.visible": false,

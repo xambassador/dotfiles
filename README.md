@@ -3,18 +3,25 @@ My VS Code settings.
 
 # Extensions
 - Autoprefixer
+- Auto Rename Tag
+- Better Comments
+- C/C++
 - Color Highlight
-- Customize UI + Monkey Patch
+- Custom CSS and JS loader
+- Dracula Official
+- ENV
 - ESLint
-- Git Graph
 - Github Copilot
+- Go
+- Git Graph
 - Live Server
 - Material Icon Theme
+- Night Owl
 - Path Intellisense
 - Prettier
+- Prisma
 - Rainbow Brackets
-- Better Comments
-- Custom CSS and JS loader
+- Tailwind CSS Intellisense
 
 # Theme
 - Night Owl
