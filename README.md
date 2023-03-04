@@ -22,6 +22,7 @@ My VS Code settings.
 - Prisma
 - Rainbow Brackets
 - Tailwind CSS Intellisense
+- Todo Tree
 
 # Theme
 - Night Owl

@@ -13,12 +13,13 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "workbench.sideBar.location": "right",
+    "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": false,
     "workbench.editor.showTabs": false,
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "off",
     "scm.diffDecorations": "none",
-    "editor.hover.enabled": false,
+    "editor.hover.enabled": true,
     "editor.matchBrackets": "never",
     "workbench.tips.enabled": false,
     "editor.colorDecorators": false,
@@ -43,17 +44,18 @@
     /** Typography + Themes **/
     "workbench.colorTheme": "Night Owl (No Italics)",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "-MonoLisa, -Roboto Mono, SF Mono, 'Dank Mono', JetBrainsMono Nerd Font, Space Mono, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 20,
+    "editor.fontFamily": "-MonoLisa, -Roboto Mono, -SF Mono, 'Dank Mono', JetBrainsMono Nerd Font, Space Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 22,
     "editor.fontLigatures": true,
     "editor.lineHeight": 82,
     "editor.suggestFontSize": 15,
     "editor.suggestLineHeight": 28,
-    "terminal.integrated.fontSize": 16,
-    "terminal.integrated.lineHeight": 2,
+    "terminal.integrated.fontSize": 20,
+    "terminal.integrated.lineHeight": 3,
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
     "editor.smoothScrolling": true,
     "editor.suggestSelection": "first",
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.guides.indentation": false,
     "editor.inlineSuggest.enabled": true,
 
@@ -65,13 +67,32 @@
         // Hide everything in /public, except "index.php"
         "**/public/{[^i],?[^n]}*": true,
         "**/node_modules": true,
+        "**/build": true,
         "**/dist": true,
         "**/_ide_helper.php": true,
         "**/composer.lock": true,
         "**/package-lock.json": true,
         "storage": true,
         ".phpunit.result.cache": true,
-        ".next": true
+        "**/.vscode": true,
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/.idea": true,
+        "**/.vs": true,
+        "**/.sass-cache": true,
+        "**/.cache": true,
+        "**/.npm": true,
+        "**/.yarn": true,
+        "**/.yarn-cache": true,
+        "**/.yarn-integrity": true,
+        "**/.yarnrc": true,
+        "**/.yarnrc.yml": true,
+        "**/.yarnrc.json": true,
+        "**/.yarnrc.js": true,
+        "**/.yarnrc.cjs": true,
+        "yarn.lock": true,
+        // ignore .next folder anywhere
+        "**/.next": true,
     },
 
     /** Code **/
@@ -92,6 +113,7 @@
         "*.env.example": "env",
         "*.env": "env",
         "*.env.local": "env",
+        "*.env.test": "env",
     },
 
     /** PHP **/
@@ -162,6 +184,75 @@
     /* Better comments */
     "better-comments.multilineComments": true,
 
+    /* TODO Tree*/
+    "todo-tree.general.tags": [
+        "TODO", "FIXME", "BUG", "COMPLETE", "NOTE", "REVIEW", "CHANGED", "TAG", "REMOVEME", "IMPLEMENTME", "HACK", "TEMP", "IDEA", "INFO", "TEST", "DEPRECATED", "REFACTOR",
+    ],
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "checklist",
+            "type": "text",
+            "background": "#ffbd2a",
+            "foreground": "#ffffff",
+        },
+        "COMPLETE": {
+            "icon": "check-circle-fill",
+            "iconColour": "#00b894",
+            "type": "text",
+            "background": "#00b894",
+            "foreground": "#ffffff",
+        },
+        "FIXME": {
+            "icon": "alert-fill",
+            "iconColour": "#ff7675",
+            "type": "text",
+            "background": "#ff7675",
+            "foreground": "#ffffff",
+        },
+        "BUG": {
+            "icon": "$(bug)",
+            "type": "text",
+            "background": "#FF0303",
+            "foreground": "#ffffff",
+        },
+        "NOTE": {
+            "icon": "book",
+            "type": "text",
+            "background": "#00cec9",
+            "foreground": "#ffffff",
+        },
+        "REVIEW": {
+            "icon": "eye",
+            "type": "text",
+            "background": "#0984e3",
+            "foreground": "#ffffff",
+        },
+        "CHANGED": {
+            "icon": "file-diff",
+            "type": "text",
+            "background": "#fdcb6e",
+            "foreground": "#ffffff",
+        },
+        "TAG": {
+            "icon": "tag",
+            "type": "text",
+            "background": "#285430",
+            "foreground": "#ffffff",
+        },
+        "REMOVEME": {
+            "icon": "trash",
+            "type": "text",
+            "background": "#d63031",
+            "foreground": "#ffffff",
+        },
+        "IMPLEMENTME": {
+            "icon": "code",
+            "type": "text",
+            "background": "#0984e3",
+            "foreground": "#ffffff",
+        }
+    },
+
     // eslint
     "eslint.validate": [
         "javascript",
@@ -172,20 +263,12 @@
 
     // move terminal panel to the left
     "workbench.panel.defaultLocation": "left",
-
-    /** Window Settings **/
-    // Note for Windows users:
-    // Unfortunately, "Full-bleed" isn't possible in Windows.
-    // The best you can do is use the native "Windows" window
-    // style and add these CSS selectors to clean it up further.
-    "window.menuBarVisibility": "toggle",
     // For windows set titleBarStyle to custom and for mac and linux set it to native.
     // For kde based distro, use "native" and for gnome use "custom".
     "window.titleBarStyle": "native",
     "vscode_custom_css.imports": ["file:///home/yash/Documents/custom-vscode-css.css"],
     "git.autofetch": true,
     "window.commandCenter": false,
-    "workbench.activityBar.visible": false,
     "breadcrumbs.enabled": false,
     "explorer.compactFolders": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
@@ -195,5 +278,31 @@
         "plaintext": false,
         "markdown": false,
         "cpp": true
-    }
+    },
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "nu": {
+            "path": "nu",
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.menuBarVisibility": "toggle"
 }

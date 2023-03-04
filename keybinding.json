@@ -30,6 +30,10 @@
         "key": "ctrl+t",
         "command": "workbench.action.terminal.toggleTerminal"
     },
+     {
+        "key": "ctrl+k ctrl+t",
+        "command": "workbench.view.extension.todo-tree-container"
+     }
 
     /**
     * Toggle Font Size
