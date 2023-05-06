@@ -3,106 +3,108 @@
 /* Update the path in vscode_custom_css.imports in settings.json. That path is where you save this file.*/
 
 .editor .title {
-    background: transparent !important;
-  }
+  background: transparent !important;
+}
 
-  .editor .title .label-container {
-    visibility: hidden !important;
-  }
+.editor .title .label-container {
+  visibility: hidden !important;
+}
 
-  .editor .title .actions-container .action-item a {
-    visibility: hidden !important;
-  }
+.editor .title .actions-container .action-item a {
+  visibility: hidden !important;
+}
 
-  .editor .title .actions-container .action-item a[title=\"Open Settings (UI)\"] {
-    visibility: initial;
-  }
+.editor .title .actions-container .action-item a[title=\"Open Settings (UI)\"] {
+  visibility: initial;
+}
 
-  .editor
-    .title
-    .actions-container
-    .action-item
-    a[title=\"Open Settings (JSON)\"] {
-    visibility: initial;
-  }
+.editor
+  .title
+  .actions-container
+  .action-item
+  a[title=\"Open Settings (JSON)\"] {
+  visibility: initial;
+}
 
-  .editor .title .actions-container {
-    flex-direction: row-reverse;
-  }
+.editor .title .actions-container {
+  flex-direction: row-reverse;
+}
 
-  .editor .scrollbar .slider {
-    visibility: hidden;
-  }
+.editor .scrollbar .slider {
+  visibility: hidden;
+}
 
-  .editor .scrollbar:hover .slider {
-    visibility: initial;
-  }
+.editor .scrollbar:hover .slider {
+  visibility: initial;
+}
 
-  .monaco-editor .cursor {
-    background: linear-gradient(to bottom, #7f00ff, #e100ff) !important;
-    color: #292d3e !important;
-  }
+.monaco-editor .cursor {
+  background: linear-gradient(to bottom, #7f00ff, #e100ff) !important;
+  color: #292d3e !important;
+}
 
-  div.title.show-file-icons.title-border-bottom {
+div.title.show-file-icons.title-border-bottom {
+  display: none !important;
+}
+
+.titlebar > div.titlebar-container > a {
+  opacity: 0 !important;
+}
+
+.titlebar > div.titlebar-container > div.window-title {
+  opacity: 0 !important;
+}
+
+.titlebar
+  > div.titlebar-container
+  > div.layout-controls-container.show-layout-control {
+  display: none !important;
+}
+
+.titlebar {
+  border-bottom: none !important;
+}
+
+.linux {
+  font-family: "SF Mono, Fira Code Mono, system-ui,Ubuntu,Droid Sans",
+    sans-serif !important;
+}
+
+.monaco-editor .scroll-decoration {
+    box-shadow: none !important;
+}
+
+div.monaco-scrollable-element > div.split-view-container > div > div > div.title.show-file-icons.title-border-bottom {
     display: none !important;
-  }
+}
 
-  .titlebar > div.titlebar-container > a {
+/* ************************************ 05/05/23 ******************************************* */
+.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-left,
+.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center {
     opacity: 0 !important;
-  }
+}
 
-  .titlebar > div.titlebar-container > div.window-title {
-    opacity: 0 !important;
-  }
-
-  .titlebar
-    > div.titlebar-container
-    > div.layout-controls-container.show-layout-control {
+.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-right {
     display: none !important;
-  }
+}
 
-  .titlebar {
-    border-bottom: none !important;
-  }
+.monaco-workbench .part.editor>.content .editor-group-container>.title:not(.tabs) {
+    display: none !important;
+}
 
-  .linux {
-    font-family: "SF Mono, Fira Code Mono, system-ui,Ubuntu,Droid Sans",
-      sans-serif !important;
-  }
+.monaco-pane-view .split-view-view:first-of-type>.pane>.pane-header {
+    border-radius: 10px !important;
+}
 
-  .monaco-editor .scroll-decoration {
-      box-shadow: none !important;
-  }
+.monaco-list-row:hover:not(.selected):not(.focused) {
+    border-radius: 10px !important;
+}
 
-  div.monaco-scrollable-element > div.split-view-container > div > div > div.title.show-file-icons.title-border-bottom {
-      display: none !important;
-  }
+.monaco-list-row.focused.selected {
+    border-radius: 10px !important;
+}
 
-  /* ************************************ 05/05/23 ******************************************* */
-  .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-left,
-  .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center,
-  .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-right {
-      opacity: 0 !important;
-  }
-
-  .monaco-workbench .part.editor>.content .editor-group-container>.title:not(.tabs) {
-      display: none !important;
-  }
-
-  .monaco-split-view2>.sash-container>.monaco-sash,
-  .monaco-split-view2>.sash-container>.monaco-sash,
-  .monaco-split-view2>.sash-container>.monaco-sash {
-      display: none !important;
-  }
-
-  .monaco-pane-view .split-view-view:first-of-type>.pane>.pane-header {
-      border-radius: 10px !important;
-  }
-
-  .monaco-list-row:hover:not(.selected):not(.focused) {
-      border-radius: 10px !important;
-  }
-
-  .monaco-list-row.focused.selected {
-      border-radius: 10px !important;
-  }
+/******* Remove Shortcuts that are display when no files are open*/
+.monaco-workbench .editor-group-container>.editor-group-watermark>.shortcuts {
+    display: none !important;
+}
