@@ -108,3 +108,10 @@ div.monaco-scrollable-element > div.split-view-container > div > div > div.title
 .monaco-workbench .editor-group-container>.editor-group-watermark>.shortcuts {
     display: none !important;
 }
+
+/* Cursor styles */
+.monaco-editor .cursor {
+    background: linear-gradient(to bottom, #ee0979, #ff6a00) !important;
+    box-shadow: 0 0 42px 5px #ee0979, #ff6a00 0px 0px 34px 1px;
+    color: #161616 !important;
+}
