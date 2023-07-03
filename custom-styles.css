@@ -41,6 +41,7 @@
 .monaco-editor .cursor {
   background: linear-gradient(to bottom, #7f00ff, #e100ff) !important;
   color: #292d3e !important;
+  transition: all 220ms cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
 div.title.show-file-icons.title-border-bottom {
@@ -71,47 +72,70 @@ div.title.show-file-icons.title-border-bottom {
 }
 
 .monaco-editor .scroll-decoration {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
-div.monaco-scrollable-element > div.split-view-container > div > div > div.title.show-file-icons.title-border-bottom {
-    display: none !important;
+div.monaco-scrollable-element
+  > div.split-view-container
+  > div
+  > div
+  > div.title.show-file-icons.title-border-bottom {
+  display: none !important;
 }
 
 /* ************************************ 05/05/23 ******************************************* */
-.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-left,
-.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center {
-    opacity: 0 !important;
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-left,
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-center {
+  opacity: 0 !important;
 }
 
-.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-right {
-    display: none !important;
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-right {
+  display: none !important;
 }
 
-.monaco-workbench .part.editor>.content .editor-group-container>.title:not(.tabs) {
-    display: none !important;
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title:not(.tabs) {
+  display: none !important;
 }
 
-.monaco-pane-view .split-view-view:first-of-type>.pane>.pane-header {
-    border-radius: 10px !important;
+.monaco-pane-view .split-view-view:first-of-type > .pane > .pane-header {
+  border-radius: 10px !important;
 }
 
 .monaco-list-row:hover:not(.selected):not(.focused) {
-    border-radius: 10px !important;
+  border-radius: 10px !important;
 }
 
 .monaco-list-row.focused.selected {
-    border-radius: 10px !important;
+  border-radius: 10px !important;
 }
 
 /******* Remove Shortcuts that are display when no files are open*/
-.monaco-workbench .editor-group-container>.editor-group-watermark>.shortcuts {
-    display: none !important;
+.monaco-workbench
+  .editor-group-container
+  > .editor-group-watermark
+  > .shortcuts {
+  display: none !important;
 }
 
 /* Cursor styles */
-.monaco-editor .cursor {
-    background: linear-gradient(to bottom, #ee0979, #ff6a00) !important;
-    box-shadow: 0 0 42px 5px #ee0979, #ff6a00 0px 0px 34px 1px;
-    color: #161616 !important;
-}
+/* .monaco-editor .cursor {
+      background: linear-gradient(to bottom, #ee0979, #ff6a00) !important;
+      box-shadow: 0 0 42px 5px #ee0979, #ff6a00 0px 0px 34px 1px;
+      color: #161616 !important;
+  } */
+
+/* -------------- */
+/* .windows,
+  .linux {
+      font-family: 'SF Mono' !important;
+  } */
+
+/* .monaco-workbench {
+      background-color: #1B1726 !important;
+      background-size: cover;
+      background-image: url();
+  } */
