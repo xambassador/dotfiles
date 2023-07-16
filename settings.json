@@ -1,308 +1,326 @@
 {
-    /** Defaults **/
-    "editor.copyWithSyntaxHighlighting": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.emptySelectionClipboard": false,
-    "workbench.editor.enablePreview": false,
-    "window.newWindowDimensions": "inherit",
-    "editor.multiCursorModifier": "ctrlCmd",
-    "files.trimTrailingWhitespace": true,
-    "diffEditor.renderSideBySide": false,
-    "editor.snippetSuggestions": "top",
-    "editor.detectIndentation": false,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "workbench.sideBar.location": "right",
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": false,
-    "workbench.editor.showTabs": false,
-    "editor.minimap.enabled": false,
-    "editor.lineNumbers": "off",
-    "scm.diffDecorations": "none",
-    "editor.hover.enabled": true,
-    "editor.matchBrackets": "never",
-    "workbench.tips.enabled": false,
-    "editor.colorDecorators": false,
-    "git.decorations.enabled": false,
-    "workbench.startupEditor": "none",
-    "editor.lightbulb.enabled": false,
-    "editor.selectionHighlight": false,
-    "editor.overviewRulerBorder": false,
-    "editor.renderLineHighlight": "none",
-    "editor.occurrencesHighlight": false,
-    "problems.decorations.enabled": false,
-    "editor.renderControlCharacters": false,
-    "editor.hideCursorInOverviewRuler": true,
-    "editor.gotoLocation.multipleReferences": "goto",
-    "editor.gotoLocation.multipleDefinitions": "goto",
-    "editor.gotoLocation.multipleDeclarations": "goto",
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.gotoLocation.multipleImplementations": "goto",
-    "editor.gotoLocation.multipleTypeDefinitions": "goto",
-    "editor.renderWhitespace": "none",
+  /** Defaults **/
+  "editor.copyWithSyntaxHighlighting": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.emptySelectionClipboard": false,
+  "workbench.editor.enablePreview": false,
+  "window.newWindowDimensions": "inherit",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "files.trimTrailingWhitespace": true,
+  "diffEditor.renderSideBySide": false,
+  "editor.snippetSuggestions": "top",
+  "editor.detectIndentation": false,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false,
+  "workbench.editor.showTabs": false,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "off",
+  "scm.diffDecorations": "none",
+  "editor.hover.enabled": true,
+  "editor.matchBrackets": "never",
+  "workbench.tips.enabled": false,
+  "editor.colorDecorators": false,
+  "git.decorations.enabled": false,
+  "workbench.startupEditor": "none",
+  "editor.lightbulb.enabled": false,
+  "editor.selectionHighlight": false,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "none",
+  "editor.occurrencesHighlight": false,
+  "problems.decorations.enabled": false,
+  "editor.renderControlCharacters": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "editor.renderWhitespace": "none",
 
-    /** Typography + Themes **/
-    "workbench.colorTheme": "Night Owl (No Italics)",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "-MonoLisa, -Roboto Mono, -SF Mono, 'Dank Mono', JetBrainsMono Nerd Font, Space Mono, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 22,
-    "editor.fontLigatures": true,
-    "editor.lineHeight": 82,
-    "editor.suggestFontSize": 15,
-    "editor.suggestLineHeight": 28,
-    "terminal.integrated.fontSize": 20,
-    "terminal.integrated.lineHeight": 3,
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-    "editor.smoothScrolling": true,
-    "editor.suggestSelection": "first",
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.guides.indentation": false,
-    "editor.inlineSuggest.enabled": true,
+  /** Typography + Themes **/
+  "workbench.colorTheme": "Night Owl (No Italics)",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "-MonoLisa, -Roboto Mono, -SF Mono, 'Dank Mono', JetBrainsMono Nerd Font, Space Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 22,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 82,
+  "editor.suggestFontSize": 15,
+  "editor.suggestLineHeight": 28,
+  "terminal.integrated.fontSize": 20,
+  "terminal.integrated.lineHeight": 3,
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.smoothScrolling": true,
+  "editor.suggestSelection": "first",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.guides.indentation": false,
+  "editor.inlineSuggest.enabled": true,
 
-    /** Find **/
-    "search.useIgnoreFiles": false,
-    "search.exclude": {
-        // Hide everything in /vendor, except the "laravel" and "livewire" folder.
-        "**/vendor/{[^l],?[^ai]}*": true,
-        // Hide everything in /public, except "index.php"
-        "**/public/{[^i],?[^n]}*": true,
-        "**/node_modules": true,
-        "**/build": true,
-        "**/dist": true,
-        "**/_ide_helper.php": true,
-        "**/composer.lock": true,
-        "**/package-lock.json": true,
-        "storage": true,
-        ".phpunit.result.cache": true,
-        "**/.vscode": true,
-        "**/.git": true,
-        "**/.DS_Store": true,
-        "**/.idea": true,
-        "**/.vs": true,
-        "**/.sass-cache": true,
-        "**/.cache": true,
-        "**/.npm": true,
-        "**/.yarn": true,
-        "**/.yarn-cache": true,
-        "**/.yarn-integrity": true,
-        "**/.yarnrc": true,
-        "**/.yarnrc.yml": true,
-        "**/.yarnrc.json": true,
-        "**/.yarnrc.js": true,
-        "**/.yarnrc.cjs": true,
-        "yarn.lock": true,
-        // ignore .next folder anywhere
-        "**/.next": true,
-    },
+  /** Find **/
+  "search.useIgnoreFiles": false,
+  "search.exclude": {
+    // Hide everything in /vendor, except the "laravel" and "livewire" folder.
+    "**/vendor/{[^l],?[^ai]}*": true,
+    // Hide everything in /public, except "index.php"
+    "**/public/{[^i],?[^n]}*": true,
+    "**/node_modules": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/_ide_helper.php": true,
+    "**/composer.lock": true,
+    "**/package-lock.json": true,
+    "storage": true,
+    ".phpunit.result.cache": true,
+    "**/.vscode": true,
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/.idea": true,
+    "**/.vs": true,
+    "**/.sass-cache": true,
+    "**/.cache": true,
+    "**/.npm": true,
+    "**/.yarn": true,
+    "**/.yarn-cache": true,
+    "**/.yarn-integrity": true,
+    "**/.yarnrc": true,
+    "**/.yarnrc.yml": true,
+    "**/.yarnrc.json": true,
+    "**/.yarnrc.js": true,
+    "**/.yarnrc.cjs": true,
+    "yarn.lock": true,
+    // ignore .next folder anywhere
+    "**/.next": true
+  },
 
-    /** Code **/
-    // Include "-" in word selection.
-    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
-    "emmet.includeLanguages": {
-        "blade": "html",
-        "vue-html": "html",
-        "vue": "html",
-        "javascript": "javascriptreact"
-    },
-    "files.associations": {
-        ".php_cs": "php",
-        ".php_cs.dist": "php",
-        "*.env.development": "env",
-        "*.env.production": "env",
-        "*.env.testing": "env",
-        "*.env.example": "env",
-        "*.env": "env",
-        "*.env.local": "env",
-        "*.env.test": "env",
-    },
+  /** Code **/
+  // Include "-" in word selection.
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  "emmet.includeLanguages": {
+    "blade": "html",
+    "vue-html": "html",
+    "vue": "html",
+    "javascript": "javascriptreact"
+  },
+  "files.associations": {
+    ".php_cs": "php",
+    ".php_cs.dist": "php",
+    "*.env.development": "env",
+    "*.env.production": "env",
+    "*.env.testing": "env",
+    "*.env.example": "env",
+    "*.env": "env",
+    "*.env.local": "env",
+    "*.env.test": "env"
+  },
 
-    /** PHP **/
-    "php.suggest.basic": false,
+  /** PHP **/
+  "php.suggest.basic": false,
 
-    /** PHP CS Fixer **/
+  /** PHP CS Fixer **/
 
-    /** Prettier **/
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
+  /** Prettier **/
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[pug]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
     },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[html]": {
-        "editor.suggest.insertMode": "replace",
-        "editor.defaultFormatter": "vscode.html-language-features",
-        "editor.formatOnSave": true
-    },
-    "[css]": {
-        "editor.suggest.insertMode": "replace",
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[scss]": {
-        "editor.suggest.insertMode": "replace",
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[pug]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[go]": {
-        "editor.insertSpaces": false,
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-        "editor.suggest.snippetsPreventQuickSuggestions": false
-    },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[prisma]": {
-        "editor.defaultFormatter": "Prisma.prisma",
-        "editor.formatOnSave": true
-    },
-    "prettier.requireConfig": true,
-    "prettier.useEditorConfig": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  },
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
 
-    "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
 
-    /* Better comments */
-    "better-comments.multilineComments": true,
+  /* Better comments */
+  "better-comments.multilineComments": true,
 
-    /* TODO Tree*/
-    "todo-tree.general.tags": [
-        "TODO", "FIXME", "BUG", "COMPLETE", "NOTE", "REVIEW", "CHANGED", "TAG", "REMOVEME", "IMPLEMENTME", "HACK", "TEMP", "IDEA", "INFO", "TEST", "DEPRECATED", "REFACTOR",
-    ],
-    "todo-tree.highlights.customHighlight": {
-        "TODO": {
-            "icon": "checklist",
-            "type": "text",
-            "background": "#ffbd2a",
-            "foreground": "#ffffff",
-        },
-        "COMPLETE": {
-            "icon": "check-circle-fill",
-            "iconColour": "#00b894",
-            "type": "text",
-            "background": "#00b894",
-            "foreground": "#ffffff",
-        },
-        "FIXME": {
-            "icon": "alert-fill",
-            "iconColour": "#ff7675",
-            "type": "text",
-            "background": "#ff7675",
-            "foreground": "#ffffff",
-        },
-        "BUG": {
-            "icon": "$(bug)",
-            "type": "text",
-            "background": "#FF0303",
-            "foreground": "#ffffff",
-        },
-        "NOTE": {
-            "icon": "book",
-            "type": "text",
-            "background": "#00cec9",
-            "foreground": "#ffffff",
-        },
-        "REVIEW": {
-            "icon": "eye",
-            "type": "text",
-            "background": "#0984e3",
-            "foreground": "#ffffff",
-        },
-        "CHANGED": {
-            "icon": "file-diff",
-            "type": "text",
-            "background": "#fdcb6e",
-            "foreground": "#ffffff",
-        },
-        "TAG": {
-            "icon": "tag",
-            "type": "text",
-            "background": "#285430",
-            "foreground": "#ffffff",
-        },
-        "REMOVEME": {
-            "icon": "trash",
-            "type": "text",
-            "background": "#d63031",
-            "foreground": "#ffffff",
-        },
-        "IMPLEMENTME": {
-            "icon": "code",
-            "type": "text",
-            "background": "#0984e3",
-            "foreground": "#ffffff",
-        }
+  /* TODO Tree*/
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIXME",
+    "BUG",
+    "COMPLETE",
+    "NOTE",
+    "REVIEW",
+    "CHANGED",
+    "TAG",
+    "REMOVEME",
+    "IMPLEMENTME",
+    "HACK",
+    "TEMP",
+    "IDEA",
+    "INFO",
+    "TEST",
+    "DEPRECATED",
+    "REFACTOR"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "checklist",
+      "type": "text",
+      "background": "#ffbd2a",
+      "foreground": "#ffffff"
     },
-
-    // eslint
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
-
-    // move terminal panel to the left
-    "workbench.panel.defaultLocation": "left",
-    // For windows set titleBarStyle to custom and for mac and linux set it to native.
-    // For kde based distro, use "native" and for gnome use "custom".
-    "window.titleBarStyle": "native",
-    "vscode_custom_css.imports": ["file:///home/yash/Documents/custom-vscode-css.css"],
-    "git.autofetch": true,
-    "window.commandCenter": false,
-    "breadcrumbs.enabled": false,
-    "explorer.compactFolders": false,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": false,
-        "cpp": true
+    "COMPLETE": {
+      "icon": "check-circle-fill",
+      "iconColour": "#00b894",
+      "type": "text",
+      "background": "#00b894",
+      "foreground": "#ffffff"
     },
-    "terminal.integrated.profiles.linux": {
-        "bash": {
-            "path": "bash",
-            "icon": "terminal-bash"
-        },
-        "zsh": {
-            "path": "zsh"
-        },
-        "fish": {
-            "path": "fish"
-        },
-        "tmux": {
-            "path": "tmux",
-            "icon": "terminal-tmux"
-        },
-        "pwsh": {
-            "path": "pwsh",
-            "icon": "terminal-powershell"
-        },
-        "nu": {
-            "path": "nu",
-        }
+    "FIXME": {
+      "icon": "alert-fill",
+      "iconColour": "#ff7675",
+      "type": "text",
+      "background": "#ff7675",
+      "foreground": "#ffffff"
     },
-    "terminal.integrated.defaultProfile.linux": "fish",
-    "security.workspace.trust.untrustedFiles": "open",
-    "window.menuBarVisibility": "toggle"
+    "BUG": {
+      "icon": "$(bug)",
+      "type": "text",
+      "background": "#FF0303",
+      "foreground": "#ffffff"
+    },
+    "NOTE": {
+      "icon": "book",
+      "type": "text",
+      "background": "#00cec9",
+      "foreground": "#ffffff"
+    },
+    "REVIEW": {
+      "icon": "eye",
+      "type": "text",
+      "background": "#0984e3",
+      "foreground": "#ffffff"
+    },
+    "CHANGED": {
+      "icon": "file-diff",
+      "type": "text",
+      "background": "#fdcb6e",
+      "foreground": "#ffffff"
+    },
+    "TAG": {
+      "icon": "tag",
+      "type": "text",
+      "background": "#285430",
+      "foreground": "#ffffff"
+    },
+    "REMOVEME": {
+      "icon": "trash",
+      "type": "text",
+      "background": "#d63031",
+      "foreground": "#ffffff"
+    },
+    "IMPLEMENTME": {
+      "icon": "code",
+      "type": "text",
+      "background": "#0984e3",
+      "foreground": "#ffffff"
+    }
+  },
+
+  // eslint
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // move terminal panel to the left
+  "workbench.panel.defaultLocation": "left",
+  // For windows and mac set titleBarStyle to custom and for linux set it to native.
+  // For kde based distro, use "native" and for gnome use "custom".
+  "window.titleBarStyle": "native",
+  "vscode_custom_css.imports": [
+    "file:///home/yash/Documents/custom-vscode-css.css"
+  ],
+  "git.autofetch": true,
+  "window.commandCenter": false,
+  "breadcrumbs.enabled": false,
+  "explorer.compactFolders": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "cpp": true
+  },
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    },
+    "nu": {
+      "path": "nu"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.menuBarVisibility": "toggle"
 }
