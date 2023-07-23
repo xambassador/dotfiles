@@ -10,7 +10,7 @@
     "Small line seperator": {
 		"prefix": "line-small-seperator",
 		"body": [
-			"/* -------------------------------- */",
+			"/* -------------------------------- */"
 		],
 		"description": "Create a line that seperate a block of code"
 	},

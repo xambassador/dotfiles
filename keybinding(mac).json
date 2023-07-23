@@ -1,7 +1,4 @@
 [
-    /**
-    * Panels
-    **/
     {
         "key": "cmd+k cmd+e",
         "command": "workbench.view.explorer"
@@ -30,10 +27,6 @@
         "key": "cmd+t",
         "command": "workbench.action.terminal.toggleTerminal"
     },
-
-    /**
-    * Toggle Font Size
-    **/
     {
         "key": "cmd+k cmd+k",
         "command": "toggle",
@@ -43,19 +36,15 @@
             "value": [
                 {
                     "editor.fontSize": 18,
-                    "editor.lineHeight": 82,
+                    "editor.lineHeight": 82
                 },
                 {
                     "editor.fontSize": 16,
-                    "editor.lineHeight": 28,
+                    "editor.lineHeight": 28
                 }
             ]
         }
     },
-
-    /**
-    * Fold/Unfold
-    **/
     {
         "key": "shift+cmd+[",
         "command": "editor.fold",
@@ -66,10 +55,6 @@
         "command": "editor.unfold",
         "when": "editorFocus"
     },
-
-    /**
-    * Line Manipulation
-    **/
     {
         "key": "cmd+l",
         "command": "editor.action.copyLinesDownAction",
@@ -80,10 +65,6 @@
         "command": "editor.action.joinLines",
         "when": "editorTextFocus"
     },
-
-    /**
-    * File Explorer
-    **/
     {
         "key": "cmd+d",
         "command": "duplicate.execute",
@@ -99,10 +80,6 @@
         "command": "explorer.newFolder",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
-
-    /**
-    * Multi-Cursor
-    **/
     {
         "key": "cmd+backspace",
         "command": "editor.action.moveSelectionToPreviousFindMatch",
@@ -118,10 +95,6 @@
         "command": "editor.action.insertCursorAtEndOfEachLineSelected",
         "when": "editorFocus && editorHasSelection"
     },
-
-    /**
-    * Split Panels
-    **/
     {
         "key": "ctrl+w",
         "command": "workbench.action.joinAllGroups",
@@ -152,10 +125,6 @@
         "command": "workbench.action.decreaseViewSize",
         "when": "editorFocus"
     },
-
-    /**
-    * Terminal Split Panel
-    **/
     {
         "key": "ctrl+n",
         "command": "workbench.action.terminal.split",
@@ -176,10 +145,6 @@
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
     },
-
-    /**
-    * Emmet
-    **/
     {
         "key": "cmd+m cmd+i",
         "command": "editor.emmet.action.balanceIn",
@@ -215,10 +180,6 @@
         "command": "editor.emmet.action.removeTag",
         "when": "editorTextFocus"
     },
-
-    /**
-    * amVim Finder Fix
-    **/
     {
         "key": "enter",
         "command": "editor.action.nextMatchFindAction",
@@ -229,13 +190,9 @@
         "command": "editor.action.previousMatchFindAction",
         "when": "findWidgetVisible"
     },
-
-    /**
-    * IntelliSense
-    **/
     {
         "key": "cmd+r",
-        "command": "workbench.action.gotoSymbol",
+        "command": "workbench.action.gotoSymbol"
     },
     {
         "key": "cmd+shift+r",
@@ -250,11 +207,6 @@
         "key": "cmd+k cmd+i",
         "command": "namespaceResolver.import"
     },
-
-
-    /**
-    * Project Switching
-    **/
     {
         "key": "cmd+;",
         "command": "workbench.action.switchWindow",
@@ -268,18 +220,10 @@
         "key": "alt+cmd+left",
         "command": "workbench.action.showPreviousWindowTab"
     },
-
-    /**
-    * Open DevTools
-    **/
     {
         "key": "alt+cmd+i",
         "command": "workbench.action.toggleDevTools"
     },
-
-    /**
-    * Hide Toaster Notifications
-    **/
     {
         "key": "escape",
         "command": "notifications.hideToasts",

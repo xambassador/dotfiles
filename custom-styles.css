@@ -1,6 +1,7 @@
-/************************************************/
-/* Custom CSS File. This file will be loaded by Custom CSS and JS loader extension. */
-/* Update the path in vscode_custom_css.imports in settings.json. That path is where you save this file.*/
+/* -----------------------------------------------------------------------------------------------
+ * Custom CSS File. This file will be loaded by Custom CSS and JS loader extension.
+ * Update the path in vscode_custom_css.imports in settings.json. That path is where you save this file.
+ * -----------------------------------------------------------------------------------------------*/
 
 .editor .title {
   background: transparent !important;
@@ -83,7 +84,6 @@ div.monaco-scrollable-element
   display: none !important;
 }
 
-/* ************************************ 05/05/23 ******************************************* */
 .monaco-workbench .part.titlebar > .titlebar-container > .titlebar-left,
 .monaco-workbench .part.titlebar > .titlebar-container > .titlebar-center {
   opacity: 0 !important;
@@ -113,7 +113,7 @@ div.monaco-scrollable-element
   border-radius: 10px !important;
 }
 
-/******* Remove Shortcuts that are display when no files are open*/
+/* Remove Shortcuts that are display when no files are open */
 .monaco-workbench
   .editor-group-container
   > .editor-group-watermark
@@ -123,19 +123,19 @@ div.monaco-scrollable-element
 
 /* Cursor styles */
 /* .monaco-editor .cursor {
-      background: linear-gradient(to bottom, #ee0979, #ff6a00) !important;
-      box-shadow: 0 0 42px 5px #ee0979, #ff6a00 0px 0px 34px 1px;
-      color: #161616 !important;
-  } */
+  background: linear-gradient(to bottom, #ee0979, #ff6a00) !important;
+  box-shadow: 0 0 42px 5px #ee0979, #ff6a00 0px 0px 34px 1px;
+  color: #161616 !important;
+} */
 
 /* -------------- */
 /* .windows,
-  .linux {
-      font-family: 'SF Mono' !important;
-  } */
+.linux {
+  font-family: "SF Mono" !important;
+} */
 
 /* .monaco-workbench {
-      background-color: #1B1726 !important;
-      background-size: cover;
-      background-image: url();
-  } */
+  background-color: #1b1726 !important;
+  background-size: cover;
+  background-image: url();
+} */
