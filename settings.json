@@ -184,90 +184,208 @@
   /* Better comments */
   "better-comments.multilineComments": true,
 
-  /* TODO Tree*/
-  "todo-tree.general.tags": [
-    "TODO",
-    "FIXME",
-    "BUG",
-    "COMPLETE",
-    "NOTE",
-    "REVIEW",
-    "CHANGED",
-    "TAG",
-    "REMOVEME",
-    "IMPLEMENTME",
-    "HACK",
-    "TEMP",
-    "IDEA",
-    "INFO",
-    "TEST",
-    "DEPRECATED",
-    "REFACTOR"
-  ],
-  "todo-tree.highlights.customHighlight": {
-    "TODO": {
-      "icon": "checklist",
-      "type": "text",
-      "background": "#ffbd2a",
-      "foreground": "#ffffff"
+     /* TODO Tree*/
+    "todo-tree.general.tags": [
+        "TODO", "@todo", "FIXME", "@fixme", "BUG", "@bug", "COMPLETE", "@complete", "NOTE", "@note", "REVIEW", "@review", "CHANGED", "@changed", "TAG", "@tag", "REMOVEME", "@removeme", "IMPLEMENTME", "@implementme", "HACK", "@hack", "IDEA", "@idea", "INFO", "@info", "TEST", "@test", "DEPRECATED", "@deprecated", "REFACTOR", "@refactor",
+    ],
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "checklist",
+            "type": "text",
+            "background": "#ffbd2a",
+            "foreground": "#ffffff",
+        },
+        "@todo": {
+            "icon": "checklist",
+            "type": "text",
+            "background": "#ffbd2a",
+            "foreground": "#ffffff",
+        },
+        "COMPLETE": {
+            "icon": "check-circle-fill",
+            "iconColour": "#00b894",
+            "type": "text",
+            "background": "#00b894",
+            "foreground": "#ffffff",
+        },
+        "@complete": {
+            "icon": "check-circle-fill",
+            "iconColour": "#00b894",
+            "type": "text",
+            "background": "#00b894",
+            "foreground": "#ffffff",
+        },
+        "FIXME": {
+            "icon": "alert-fill",
+            "iconColour": "#ff7675",
+            "type": "text",
+            "background": "#ff7675",
+            "foreground": "#ffffff",
+        },
+        "@fixme": {
+            "icon": "alert-fill",
+            "iconColour": "#ff7675",
+            "type": "text",
+            "background": "#ff7675",
+            "foreground": "#ffffff",
+        },
+        "BUG": {
+            "icon": "$(bug)",
+            "type": "text",
+            "background": "#FF0303",
+            "foreground": "#ffffff",
+        },
+        "@bug": {
+            "icon": "$(bug)",
+            "type": "text",
+            "background": "#FF0303",
+            "foreground": "#ffffff",
+        },
+        "NOTE": {
+            "icon": "book",
+            "type": "text",
+            "background": "#00cec9",
+            "foreground": "#ffffff",
+        },
+        "@note": {
+            "icon": "book",
+            "type": "text",
+            "background": "#00cec9",
+            "foreground": "#ffffff",
+        },
+        "REVIEW": {
+            "icon": "eye",
+            "type": "text",
+            "background": "#0984e3",
+            "foreground": "#ffffff",
+        },
+        "@review": {
+            "icon": "eye",
+            "type": "text",
+            "background": "#0984e3",
+            "foreground": "#ffffff",
+        },
+        "CHANGED": {
+            "icon": "file-diff",
+            "type": "text",
+            "background": "#fdcb6e",
+            "foreground": "#ffffff",
+        },
+        "@changed": {
+            "icon": "file-diff",
+            "type": "text",
+            "background": "#fdcb6e",
+            "foreground": "#ffffff",
+        },
+        "TAG": {
+            "icon": "tag",
+            "type": "text",
+            "background": "#285430",
+            "foreground": "#ffffff",
+        },
+        "@tag": {
+            "icon": "tag",
+            "type": "text",
+            "background": "#285430",
+            "foreground": "#ffffff",
+        },
+        "REMOVEME": {
+            "icon": "trash",
+            "type": "text",
+            "background": "#d63031",
+            "foreground": "#ffffff",
+        },
+        "@removeme": {
+            "icon": "trash",
+            "type": "text",
+            "background": "#d63031",
+            "foreground": "#ffffff",
+        },
+        "IMPLEMENTME": {
+            "icon": "code",
+            "type": "text",
+            "background": "#0984e3",
+            "foreground": "#ffffff",
+        },
+        "@implementme": {
+            "icon": "code",
+            "type": "text",
+            "background": "#0984e3",
+            "foreground": "#ffffff",
+        },
+        "HACK": {
+            "icon": "tools",
+            "type": "text",
+            "background": "#6c5ce7",
+            "foreground": "#ffffff",
+        },
+        "@hack": {
+            "icon": "tools",
+            "type": "text",
+            "background": "#6c5ce7",
+            "foreground": "#ffffff",
+        },
+        "IDEA": {
+            "icon": "light-bulb",
+            "type": "text",
+            "background": "#fdcb6e",
+            "foreground": "#ffffff",
+        },
+        "@idea": {
+            "icon": "light-bulb",
+            "type": "text",
+            "background": "#fdcb6e",
+            "foreground": "#ffffff",
+        },
+        "INFO": {
+            "icon": "info",
+            "type": "text",
+            "background": "#00cec9",
+            "foreground": "#ffffff",
+        },
+        "@info": {
+            "icon": "info",
+            "type": "text",
+            "background": "#00cec9",
+            "foreground": "#ffffff",
+        },
+        "TEST": {
+            "icon": "beaker",
+            "type": "text",
+            "background": "#6c5ce7",
+            "foreground": "#ffffff",
+        },
+        "@test": {
+            "icon": "beaker",
+            "type": "text",
+            "background": "#6c5ce7",
+            "foreground": "#ffffff",
+        },
+        "DEPRECATED": {
+            "icon": "archive",
+            "type": "text",
+            "background": "#d63031",
+            "foreground": "#ffffff",
+        },
+        "@deprecated": {
+            "icon": "archive",
+            "type": "text",
+            "background": "#d63031",
+            "foreground": "#ffffff",
+        },
+        "REFACTOR": {
+            "icon": "repo-clone",
+            "type": "text",
+            "background": "#fdcb6e",
+            "foreground": "#ffffff",
+        },
+        "@refactor": {
+            "icon": "repo-clone",
+            "type": "text",
+            "background": "#fdcb6e",
+            "foreground": "#ffffff",
+        },
     },
-    "COMPLETE": {
-      "icon": "check-circle-fill",
-      "iconColour": "#00b894",
-      "type": "text",
-      "background": "#00b894",
-      "foreground": "#ffffff"
-    },
-    "FIXME": {
-      "icon": "alert-fill",
-      "iconColour": "#ff7675",
-      "type": "text",
-      "background": "#ff7675",
-      "foreground": "#ffffff"
-    },
-    "BUG": {
-      "icon": "$(bug)",
-      "type": "text",
-      "background": "#FF0303",
-      "foreground": "#ffffff"
-    },
-    "NOTE": {
-      "icon": "book",
-      "type": "text",
-      "background": "#00cec9",
-      "foreground": "#ffffff"
-    },
-    "REVIEW": {
-      "icon": "eye",
-      "type": "text",
-      "background": "#0984e3",
-      "foreground": "#ffffff"
-    },
-    "CHANGED": {
-      "icon": "file-diff",
-      "type": "text",
-      "background": "#fdcb6e",
-      "foreground": "#ffffff"
-    },
-    "TAG": {
-      "icon": "tag",
-      "type": "text",
-      "background": "#285430",
-      "foreground": "#ffffff"
-    },
-    "REMOVEME": {
-      "icon": "trash",
-      "type": "text",
-      "background": "#d63031",
-      "foreground": "#ffffff"
-    },
-    "IMPLEMENTME": {
-      "icon": "code",
-      "type": "text",
-      "background": "#0984e3",
-      "foreground": "#ffffff"
-    }
-  },
 
   // eslint
   "eslint.validate": [
