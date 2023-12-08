@@ -1,66 +1,73 @@
 {
-  /** Defaults **/
+  // ------ Editor ------
   "editor.copyWithSyntaxHighlighting": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.emptySelectionClipboard": false,
-  "workbench.editor.enablePreview": false,
-  "window.newWindowDimensions": "inherit",
   "editor.multiCursorModifier": "ctrlCmd",
-  "files.trimTrailingWhitespace": true,
-  "diffEditor.renderSideBySide": false,
+  "editor.emptySelectionClipboard": false,
   "editor.snippetSuggestions": "top",
   "editor.detectIndentation": false,
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "workbench.sideBar.location": "right",
-  "workbench.activityBar.visible": false,
-  "workbench.statusBar.visible": false,
-  "workbench.editor.showTabs": false,
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "off",
-  "scm.diffDecorations": "none",
   "editor.hover.enabled": true,
   "editor.matchBrackets": "never",
-  "workbench.tips.enabled": false,
   "editor.colorDecorators": false,
-  "git.decorations.enabled": false,
-  "workbench.startupEditor": "none",
   "editor.lightbulb.enabled": false,
   "editor.selectionHighlight": false,
   "editor.overviewRulerBorder": false,
   "editor.renderLineHighlight": "none",
   "editor.occurrencesHighlight": false,
-  "problems.decorations.enabled": false,
   "editor.renderControlCharacters": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleDeclarations": "goto",
-  "workbench.editor.enablePreviewFromQuickOpen": false,
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.renderWhitespace": "none",
-
-  /** Typography + Themes **/
-  "workbench.colorTheme": "Night Owl (No Italics)",
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": "-MonoLisa, -Roboto Mono, -SF Mono, 'Dank Mono', JetBrainsMono Nerd Font, Space Mono, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 22,
-  "editor.fontLigatures": true,
-  "editor.lineHeight": 82,
-  "editor.suggestFontSize": 15,
-  "editor.suggestLineHeight": 28,
-  "terminal.integrated.fontSize": 20,
-  "terminal.integrated.lineHeight": 3,
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
   "editor.smoothScrolling": true,
   "editor.suggestSelection": "first",
-  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
   "editor.guides.indentation": false,
   "editor.inlineSuggest.enabled": true,
+  "editor.fontFamily": "'Dank Mono', Monolisa, Anonymous Pro, Input Mono, Iosevka, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Source Code Pro', 'Operator Mono', 'Inconsolata', 'Menlo', 'Consolas', 'Courier', 'monospace'",
+  "editor.fontSize": 21,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 70,
+  "editor.suggestFontSize": 15,
+  "editor.suggestLineHeight": 28,
+  // Include "-" in word selection.
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+
+  // ------ Terminal ------
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 3,
+  "terminal.integrated.fontFamily": "SFMono Nerd Font",
+
+  // ------ Workbench ------
+  "workbench.editor.enablePreview": false,
+  "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": false,
+  "workbench.editor.showTabs": "single",
+  "workbench.tips.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.fontAliasing": "antialiased", // This is only for macOS 🥲
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.colorTheme": "Overnight",
+  "workbench.iconTheme": "material-icon-theme",
+
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+  "scm.diffDecorations": "none",
+  "git.decorations.enabled": false,
+
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  "window.newWindowDimensions": "inherit",
+  "problems.decorations.enabled": false,
 
   /** Find **/
-  "search.useIgnoreFiles": false,
+  "search.useIgnoreFiles": true,
   "search.exclude": {
     // Hide everything in /vendor, except the "laravel" and "livewire" folder.
     "**/vendor/{[^l],?[^ai]}*": true,
@@ -96,17 +103,12 @@
   },
 
   /** Code **/
-  // Include "-" in word selection.
-  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
   "emmet.includeLanguages": {
-    "blade": "html",
     "vue-html": "html",
     "vue": "html",
     "javascript": "javascriptreact"
   },
   "files.associations": {
-    ".php_cs": "php",
-    ".php_cs.dist": "php",
     "*.env.development": "env",
     "*.env.production": "env",
     "*.env.testing": "env",
@@ -115,11 +117,6 @@
     "*.env.local": "env",
     "*.env.test": "env"
   },
-
-  /** PHP **/
-  "php.suggest.basic": false,
-
-  /** PHP CS Fixer **/
 
   /** Prettier **/
   "[javascript]": {
@@ -176,216 +173,99 @@
     "editor.defaultFormatter": "Prisma.prisma",
     "editor.formatOnSave": true
   },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "prettier.requireConfig": true,
   "prettier.useEditorConfig": false,
 
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  /* Better comments */
-  "better-comments.multilineComments": true,
-
-     /* TODO Tree*/
-    "todo-tree.general.tags": [
-        "TODO", "@todo", "FIXME", "@fixme", "BUG", "@bug", "COMPLETE", "@complete", "NOTE", "@note", "REVIEW", "@review", "CHANGED", "@changed", "TAG", "@tag", "REMOVEME", "@removeme", "IMPLEMENTME", "@implementme", "HACK", "@hack", "IDEA", "@idea", "INFO", "@info", "TEST", "@test", "DEPRECATED", "@deprecated", "REFACTOR", "@refactor",
-    ],
-    "todo-tree.highlights.customHighlight": {
-        "TODO": {
-            "icon": "checklist",
-            "type": "text",
-            "background": "#ffbd2a",
-            "foreground": "#ffffff",
-        },
-        "@todo": {
-            "icon": "checklist",
-            "type": "text",
-            "background": "#ffbd2a",
-            "foreground": "#ffffff",
-        },
-        "COMPLETE": {
-            "icon": "check-circle-fill",
-            "iconColour": "#00b894",
-            "type": "text",
-            "background": "#00b894",
-            "foreground": "#ffffff",
-        },
-        "@complete": {
-            "icon": "check-circle-fill",
-            "iconColour": "#00b894",
-            "type": "text",
-            "background": "#00b894",
-            "foreground": "#ffffff",
-        },
-        "FIXME": {
-            "icon": "alert-fill",
-            "iconColour": "#ff7675",
-            "type": "text",
-            "background": "#ff7675",
-            "foreground": "#ffffff",
-        },
-        "@fixme": {
-            "icon": "alert-fill",
-            "iconColour": "#ff7675",
-            "type": "text",
-            "background": "#ff7675",
-            "foreground": "#ffffff",
-        },
-        "BUG": {
-            "icon": "$(bug)",
-            "type": "text",
-            "background": "#FF0303",
-            "foreground": "#ffffff",
-        },
-        "@bug": {
-            "icon": "$(bug)",
-            "type": "text",
-            "background": "#FF0303",
-            "foreground": "#ffffff",
-        },
-        "NOTE": {
-            "icon": "book",
-            "type": "text",
-            "background": "#00cec9",
-            "foreground": "#ffffff",
-        },
-        "@note": {
-            "icon": "book",
-            "type": "text",
-            "background": "#00cec9",
-            "foreground": "#ffffff",
-        },
-        "REVIEW": {
-            "icon": "eye",
-            "type": "text",
-            "background": "#0984e3",
-            "foreground": "#ffffff",
-        },
-        "@review": {
-            "icon": "eye",
-            "type": "text",
-            "background": "#0984e3",
-            "foreground": "#ffffff",
-        },
-        "CHANGED": {
-            "icon": "file-diff",
-            "type": "text",
-            "background": "#fdcb6e",
-            "foreground": "#ffffff",
-        },
-        "@changed": {
-            "icon": "file-diff",
-            "type": "text",
-            "background": "#fdcb6e",
-            "foreground": "#ffffff",
-        },
-        "TAG": {
-            "icon": "tag",
-            "type": "text",
-            "background": "#285430",
-            "foreground": "#ffffff",
-        },
-        "@tag": {
-            "icon": "tag",
-            "type": "text",
-            "background": "#285430",
-            "foreground": "#ffffff",
-        },
-        "REMOVEME": {
-            "icon": "trash",
-            "type": "text",
-            "background": "#d63031",
-            "foreground": "#ffffff",
-        },
-        "@removeme": {
-            "icon": "trash",
-            "type": "text",
-            "background": "#d63031",
-            "foreground": "#ffffff",
-        },
-        "IMPLEMENTME": {
-            "icon": "code",
-            "type": "text",
-            "background": "#0984e3",
-            "foreground": "#ffffff",
-        },
-        "@implementme": {
-            "icon": "code",
-            "type": "text",
-            "background": "#0984e3",
-            "foreground": "#ffffff",
-        },
-        "HACK": {
-            "icon": "tools",
-            "type": "text",
-            "background": "#6c5ce7",
-            "foreground": "#ffffff",
-        },
-        "@hack": {
-            "icon": "tools",
-            "type": "text",
-            "background": "#6c5ce7",
-            "foreground": "#ffffff",
-        },
-        "IDEA": {
-            "icon": "light-bulb",
-            "type": "text",
-            "background": "#fdcb6e",
-            "foreground": "#ffffff",
-        },
-        "@idea": {
-            "icon": "light-bulb",
-            "type": "text",
-            "background": "#fdcb6e",
-            "foreground": "#ffffff",
-        },
-        "INFO": {
-            "icon": "info",
-            "type": "text",
-            "background": "#00cec9",
-            "foreground": "#ffffff",
-        },
-        "@info": {
-            "icon": "info",
-            "type": "text",
-            "background": "#00cec9",
-            "foreground": "#ffffff",
-        },
-        "TEST": {
-            "icon": "beaker",
-            "type": "text",
-            "background": "#6c5ce7",
-            "foreground": "#ffffff",
-        },
-        "@test": {
-            "icon": "beaker",
-            "type": "text",
-            "background": "#6c5ce7",
-            "foreground": "#ffffff",
-        },
-        "DEPRECATED": {
-            "icon": "archive",
-            "type": "text",
-            "background": "#d63031",
-            "foreground": "#ffffff",
-        },
-        "@deprecated": {
-            "icon": "archive",
-            "type": "text",
-            "background": "#d63031",
-            "foreground": "#ffffff",
-        },
-        "REFACTOR": {
-            "icon": "repo-clone",
-            "type": "text",
-            "background": "#fdcb6e",
-            "foreground": "#ffffff",
-        },
-        "@refactor": {
-            "icon": "repo-clone",
-            "type": "text",
-            "background": "#fdcb6e",
-            "foreground": "#ffffff",
-        },
+  /* TODO Tree*/
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIXME",
+    "BUG",
+    "COMPLETE",
+    "NOTE",
+    "REVIEW",
+    "CHANGED",
+    "TAG",
+    "REMOVEME",
+    "IMPLEMENTME",
+    "HACK",
+    "TEMP",
+    "IDEA",
+    "INFO",
+    "TEST",
+    "DEPRECATED",
+    "REFACTOR"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "checklist",
+      "type": "text",
+      "background": "#ffbd2a",
+      "foreground": "#ffffff"
     },
+    "COMPLETE": {
+      "icon": "check-circle-fill",
+      "iconColour": "#00b894",
+      "type": "text",
+      "background": "#00b894",
+      "foreground": "#ffffff"
+    },
+    "FIXME": {
+      "icon": "alert-fill",
+      "iconColour": "#ff7675",
+      "type": "text",
+      "background": "#ff7675",
+      "foreground": "#ffffff"
+    },
+    "BUG": {
+      "icon": "$(bug)",
+      "type": "text",
+      "background": "#FF0303",
+      "foreground": "#ffffff"
+    },
+    "NOTE": {
+      "icon": "book",
+      "type": "text",
+      "background": "#00cec9",
+      "foreground": "#ffffff"
+    },
+    "REVIEW": {
+      "icon": "eye",
+      "type": "text",
+      "background": "#0984e3",
+      "foreground": "#ffffff"
+    },
+    "CHANGED": {
+      "icon": "file-diff",
+      "type": "text",
+      "background": "#fdcb6e",
+      "foreground": "#ffffff"
+    },
+    "TAG": {
+      "icon": "tag",
+      "type": "text",
+      "background": "#285430",
+      "foreground": "#ffffff"
+    },
+    "REMOVEME": {
+      "icon": "trash",
+      "type": "text",
+      "background": "#d63031",
+      "foreground": "#ffffff"
+    },
+    "IMPLEMENTME": {
+      "icon": "code",
+      "type": "text",
+      "background": "#0984e3",
+      "foreground": "#ffffff"
+    }
+  },
 
   // eslint
   "eslint.validate": [
@@ -395,25 +275,33 @@
     "typescriptreact"
   ],
 
+  // Tailwind CSS IntelliSense
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["classnames\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["defaultTheme \\=([^;]*);", "'([^']*)'"],
+    ["defaultTheme \\=([^;]*);", "\"([^\"]*)\""],
+    ["defaultTheme \\=([^;]*);", "\\`([^\\`]*)\\`"]
+  ],
+
   // move terminal panel to the left
   "workbench.panel.defaultLocation": "left",
-  // For windows and mac set titleBarStyle to custom and for linux set it to native.
+  // For windows and mac set titleBarStyle to custom and linux set it to native.
   // For kde based distro, use "native" and for gnome use "custom".
-  "window.titleBarStyle": "native",
+  "window.titleBarStyle": "custom",
   "vscode_custom_css.imports": [
-    "file:///home/yash/Documents/custom-vscode-css.css"
+    "file:///Users/yashramoliya/Yash/Yash-Docs/custom-css.css"
   ],
   "git.autofetch": true,
   "window.commandCenter": false,
-  "breadcrumbs.enabled": false,
   "explorer.compactFolders": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
+    "markdown": true,
     "plaintext": false,
-    "markdown": false,
-    "cpp": true
+    "yaml": false
   },
   "terminal.integrated.profiles.linux": {
     "bash": {
@@ -440,5 +328,6 @@
   },
   "terminal.integrated.defaultProfile.linux": "fish",
   "security.workspace.trust.untrustedFiles": "open",
-  "window.menuBarVisibility": "toggle"
+  "workbench.activityBar.location": "hidden",
+  "editor.cursorSmoothCaretAnimation": "on"
 }

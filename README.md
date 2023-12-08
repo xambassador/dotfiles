@@ -2,7 +2,6 @@
 My VS Code settings.
 
 # Extensions
-- Autoprefixer
 - Auto Rename Tag
 - Better Comments
 - C/C++
@@ -23,6 +22,7 @@ My VS Code settings.
 - Rainbow Brackets
 - Tailwind CSS Intellisense
 - Todo Tree
+- Docker
 
 # Theme
 - Night Owl
