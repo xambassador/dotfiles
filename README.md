@@ -31,4 +31,4 @@ My VS Code settings.
 - CodeSandbox Theme
 
 # Screenshots
-![screenshot](screenshot.png)<br/>
+![screenshot](ss-01.png)<br/>
