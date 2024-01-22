@@ -1,0 +1,75 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js
+.next/
+out/
+build
+
+# misc
+.DS_Store
+*.pem
+
+# testing
+coverage
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+.turbo
+
+
+build/**
+dist/**
+.next/**
+
+TODO
+tmp.txt
+
+# Prisma generated files
+packages/prisma/zod
+**/generated-client
+
+**/uploads
+
+dist/**
+**/dist
+
+.react-email
+packages/emails/.react-email
