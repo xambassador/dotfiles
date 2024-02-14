@@ -33,6 +33,11 @@
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
 
+  /** Sticky scroll **/
+  "editor.stickyScroll.scrollWithEditor": false,
+  "workbench.tree.enableStickyScroll": false,
+  "editor.stickyScroll.enabled": false,
+
   /** Typography **/
   "editor.fontFamily": "Monolisa, 'Dank Mono', Anonymous Pro, Input Mono, Iosevka, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Source Code Pro', 'Operator Mono', 'Inconsolata', 'Menlo', 'Consolas', 'Courier', 'monospace'",
   "editor.fontSize": 18,
