@@ -1,5 +1,4 @@
 {
-  // ------ Editor ------
   "editor.copyWithSyntaxHighlighting": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.emptySelectionClipboard": false,
@@ -10,11 +9,11 @@
   "editor.hover.enabled": true,
   "editor.matchBrackets": "never",
   "editor.colorDecorators": false,
-  "editor.lightbulb.enabled": false,
+  "editor.lightbulb.enabled": "off",
   "editor.selectionHighlight": false,
   "editor.overviewRulerBorder": false,
   "editor.renderLineHighlight": "none",
-  "editor.occurrencesHighlight": false,
+  "editor.occurrencesHighlight": "off",
   "editor.renderControlCharacters": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.gotoLocation.multipleReferences": "goto",
@@ -25,24 +24,53 @@
   "editor.renderWhitespace": "none",
   "editor.smoothScrolling": true,
   "editor.suggestSelection": "first",
-  "editor.cursorStyle": "line",
+  "editor.cursorStyle": "block",
   "editor.guides.indentation": false,
   "editor.inlineSuggest.enabled": true,
-  "editor.fontFamily": "'Dank Mono', Monolisa, Anonymous Pro, Input Mono, Iosevka, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Source Code Pro', 'Operator Mono', 'Inconsolata', 'Menlo', 'Consolas', 'Courier', 'monospace'",
-  "editor.fontSize": 21,
-  "editor.fontLigatures": true,
-  "editor.lineHeight": 70,
-  "editor.suggestFontSize": 15,
-  "editor.suggestLineHeight": 28,
   // Include "-" in word selection.
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.glyphMargin": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
 
-  // ------ Terminal ------
+  /** Typography **/
+  "editor.fontFamily": "Monolisa, 'Dank Mono', Anonymous Pro, Input Mono, Iosevka, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Source Code Pro', 'Operator Mono', 'Inconsolata', 'Menlo', 'Consolas', 'Courier', 'monospace'",
+  "editor.fontSize": 18,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 72,
+  "editor.suggestFontSize": 15,
+  "editor.suggestLineHeight": 28,
+
+  /** Terminal **/
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.lineHeight": 3,
   "terminal.integrated.fontFamily": "SFMono Nerd Font",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    },
+    "nu": {
+      "path": "nu"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "fish",
 
-  // ------ Workbench ------
+  /** Workbench / Window **/
   "workbench.editor.enablePreview": false,
   "workbench.sideBar.location": "right",
   "workbench.statusBar.visible": false,
@@ -51,36 +79,38 @@
   "workbench.startupEditor": "none",
   "workbench.fontAliasing": "antialiased", // This is only for macOS 🥲
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.colorTheme": "Overnight",
   "workbench.iconTheme": "material-icon-theme",
+  "window.newWindowDimensions": "inherit",
+  "window.autoDetectColorScheme": true,
+  "problems.decorations.enabled": false,
+  "workbench.panel.defaultLocation": "left",
+  // For windows and mac set titleBarStyle to custom and linux set it to native.
+  // For kde based distro, use "native" and for gnome use "custom".
+  "window.titleBarStyle": "custom",
+  "window.commandCenter": false,
+  "workbench.activityBar.location": "hidden",
+
+  // Disable telemetry
+  "telemetry.telemetryLevel": "off",
 
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "scm.diffDecorations": "none",
   "git.decorations.enabled": false,
+  "git.autofetch": true,
 
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-
-  "window.newWindowDimensions": "inherit",
-  "problems.decorations.enabled": false,
-
-  /** Find **/
+  /** Search **/
+  "search.smartCase": true,
   "search.useIgnoreFiles": true,
   "search.exclude": {
-    // Hide everything in /vendor, except the "laravel" and "livewire" folder.
     "**/vendor/{[^l],?[^ai]}*": true,
-    // Hide everything in /public, except "index.php"
     "**/public/{[^i],?[^n]}*": true,
     "**/node_modules": true,
     "**/build": true,
     "**/dist": true,
-    "**/_ide_helper.php": true,
     "**/composer.lock": true,
     "**/package-lock.json": true,
     "storage": true,
-    ".phpunit.result.cache": true,
     "**/.vscode": true,
     "**/.git": true,
     "**/.DS_Store": true,
@@ -98,8 +128,10 @@
     "**/.yarnrc.js": true,
     "**/.yarnrc.cjs": true,
     "yarn.lock": true,
-    // ignore .next folder anywhere
-    "**/.next": true
+    "**/.next": true,
+    "**/vendor/*": true,
+    "**/public/*": true,
+    "**/yarn.lock": true
   },
 
   /** Code **/
@@ -107,6 +139,41 @@
     "vue-html": "html",
     "vue": "html",
     "javascript": "javascriptreact"
+  },
+
+  /** Files **/
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.enableTrash": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    ".cache-loader/": true,
+    ".gitattributes": true,
+    ".gitkeep": true,
+    ".travis.yml": true,
+    ".vercel": true,
+    ".vscode/": true,
+    "coverage": true,
+    "acf-json": true,
+    "CODE_OF_CONDUCT.md": true,
+    "LICENSE.md": true,
+    "package-lock.json": true,
+    "yarn.lock": true,
+    "phpcs.xml": true,
+    ".editorconfig": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    ".output/node_modules/": false,
+    "**/.turbo": true,
+    "**/.react-email": true,
+    "**/yarn-error.log": true,
+    "**/.next": true
   },
   "files.associations": {
     "*.env.development": "env",
@@ -116,6 +183,15 @@
     "*.env": "env",
     "*.env.local": "env",
     "*.env.test": "env"
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/.output/**": true,
+    "**/.yarn/**": true,
+    "**/node_modules/**": true
   },
 
   /** Prettier **/
@@ -162,7 +238,7 @@
     "editor.insertSpaces": false,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     },
     "editor.suggest.snippetsPreventQuickSuggestions": false
   },
@@ -173,16 +249,14 @@
     "editor.defaultFormatter": "Prisma.prisma",
     "editor.formatOnSave": true
   },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
   "prettier.requireConfig": true,
   "prettier.useEditorConfig": false,
 
+  /** JS/TS **/
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
 
-  /* TODO Tree*/
+  /** TODO Tree extension **/
   "todo-tree.general.tags": [
     "TODO",
     "FIXME",
@@ -267,7 +341,7 @@
     }
   },
 
-  // eslint
+  /** Eslint **/
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -275,7 +349,7 @@
     "typescriptreact"
   ],
 
-  // Tailwind CSS IntelliSense
+  /** Tailwind CSS IntelliSense **/
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
@@ -285,49 +359,22 @@
     ["defaultTheme \\=([^;]*);", "\\`([^\\`]*)\\`"]
   ],
 
-  // move terminal panel to the left
-  "workbench.panel.defaultLocation": "left",
-  // For windows and mac set titleBarStyle to custom and linux set it to native.
-  // For kde based distro, use "native" and for gnome use "custom".
-  "window.titleBarStyle": "custom",
   "vscode_custom_css.imports": [
     "file:///Users/yashramoliya/Yash/Yash-Docs/custom-css.css"
   ],
-  "git.autofetch": true,
-  "window.commandCenter": false,
   "explorer.compactFolders": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  /** Github copilot **/
   "github.copilot.enable": {
     "*": true,
     "markdown": true,
     "plaintext": false,
     "yaml": false
   },
-  "terminal.integrated.profiles.linux": {
-    "bash": {
-      "path": "bash",
-      "icon": "terminal-bash"
-    },
-    "zsh": {
-      "path": "zsh"
-    },
-    "fish": {
-      "path": "fish"
-    },
-    "tmux": {
-      "path": "tmux",
-      "icon": "terminal-tmux"
-    },
-    "pwsh": {
-      "path": "pwsh",
-      "icon": "terminal-powershell"
-    },
-    "nu": {
-      "path": "nu"
-    }
-  },
-  "terminal.integrated.defaultProfile.linux": "fish",
   "security.workspace.trust.untrustedFiles": "open",
-  "workbench.activityBar.location": "hidden",
-  "editor.cursorSmoothCaretAnimation": "on"
+  "workbench.colorTheme": "Overnight",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
 }
