@@ -1,0 +1,160 @@
+/* -----------------------------------------------------------------------------------------------
+ * This file is loaded by Custom CSS and JS loader extension.
+ * Update the path in vscode_custom_css.imports in settings.json. That path is where you save this file.
+ * -----------------------------------------------------------------------------------------------*/
+
+.editor .title {
+  background: transparent !important;
+}
+
+.editor .title .label-container {
+  visibility: hidden !important;
+}
+
+.editor .title .actions-container .action-item a {
+  visibility: hidden !important;
+}
+
+.editor .title .actions-container .action-item a[title=\"Open Settings (UI)\"] {
+  visibility: initial;
+}
+
+.editor
+  .title
+  .actions-container
+  .action-item
+  a[title=\"Open Settings (JSON)\"] {
+  visibility: initial;
+}
+
+.editor .title .actions-container {
+  flex-direction: row-reverse;
+}
+
+.editor .scrollbar .slider {
+  visibility: hidden;
+}
+
+.editor .scrollbar:hover .slider {
+  visibility: initial;
+}
+
+.monaco-editor .cursor {
+  background: linear-gradient(to bottom, #41B883, #41B883) !important;
+  color: #292d3e !important;
+  transition: all 220ms cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+div.title.show-file-icons.title-border-bottom {
+  display: none !important;
+}
+
+.titlebar > div.titlebar-container > a {
+  opacity: 0 !important;
+}
+
+.titlebar > div.titlebar-container > div.window-title {
+  opacity: 0 !important;
+}
+
+.titlebar
+  > div.titlebar-container
+  > div.layout-controls-container.show-layout-control {
+  display: none !important;
+}
+
+.titlebar {
+  border-bottom: none !important;
+}
+
+.linux {
+  font-family: "SF Mono, Fira Code Mono, system-ui,Ubuntu,Droid Sans",
+    sans-serif !important;
+}
+
+.monaco-editor .scroll-decoration {
+  box-shadow: none !important;
+}
+
+div.monaco-scrollable-element
+  > div.split-view-container
+  > div
+  > div
+  > div.title.show-file-icons.title-border-bottom {
+  display: none !important;
+}
+
+/* ************************************ 05/05/23 ******************************************* */
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-left,
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-center {
+  opacity: 0 !important;
+}
+
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-right {
+  display: none !important;
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title:not(.tabs) {
+  display: none !important;
+}
+
+.monaco-pane-view .split-view-view:first-of-type > .pane > .pane-header {
+  border-radius: 10px !important;
+}
+
+.monaco-list-row:hover:not(.selected):not(.focused) {
+  border-radius: 10px !important;
+}
+
+.monaco-list-row.focused.selected {
+  border-radius: 10px !important;
+}
+
+/* Remove Shortcuts that are display when no files are open */
+.monaco-workbench
+  .editor-group-container
+  > .editor-group-watermark
+  > .shortcuts {
+  display: none !important;
+}
+
+.cursor {
+  transition: all 0.17s !important;
+}
+
+/* Pacman Image */
+/* .monaco-workbench.vs-dark
+  .part.editor
+  > .content
+  .editor-group-container
+  .editor-group-watermark
+  > .letterpress {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%22455%22%20height%3D%22456%22%20viewBox%3D%220%200%20455%20456%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20opacity%3D%220.3%22%3E%3Cpath%20d%3D%22M5%20451.493V199.874V196.141H35.6124V101.317H69.2114V70.7047H99.0772V38.599H162.542V5H290.218V38.599H355.923V70.7047H388.029V101.317H418.641V196.141H450V451.493H418.641V419.388H388.029V388.029H355.923V419.388H323.817V451.493H260.352V388.029H194.648V451.493H131.93V419.388H99.0772V388.029H69.2114V419.388H35.6124V451.493H5Z%22%20stroke%3D%22black%22%20stroke-width%3D%229%22%2F%3E%3Cpath%20d%3D%22M99.0771%20165.529H35.6123V228.247H99.0771V165.529Z%22%20fill%3D%22black%22%20stroke%3D%22black%22%20stroke-width%3D%229%22%2F%3E%3Cpath%20d%3D%22M67.718%20131.93H35.6123V226.753H67.718V258.859H131.183V226.753H163.288V131.93H131.183V101.317H67.718V131.93Z%22%20stroke%3D%22black%22%20stroke-width%3D%229%22%2F%3E%3Cpath%20d%3D%22M259.606%20133.423H227.5V226.753H259.606V260.352H322.324V226.753H352.19V133.423H322.324V100.57H259.606V133.423Z%22%20stroke%3D%22black%22%20stroke-width%3D%229%22%2F%3E%3Cpath%20d%3D%22M289.472%20164.782H227.5V227.5H289.472V164.782Z%22%20fill%3D%22black%22%20stroke%3D%22black%22%20stroke-width%3D%229%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") !important;
+} */
+
+
+
+.monaco-workbench.vs-dark
+  .part.editor
+  > .content
+  .editor-group-container
+  .editor-group-watermark
+  > .letterpress {
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22281%22%20height%3D%22225%22%20viewBox%3D%220%200%20281%20225%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20filter%3D%22url(%23a)%22%3E%3Cpath%20d%3D%22M230.321%20112.424a12.6%2012.6%200%200%200-7.633-9.063%2013.1%2013.1%200%200%200-11.41.935%204.056%204.056%200%200%201-4.953-1.138%2029.84%2029.84%200%200%200-17.256-10.526%2040.63%2040.63%200%200%200-19.449-23.328%2030.5%2030.5%200%200%200-16.241-3.495%2040.3%2040.3%200%200%200-14.192-11.658%2040.3%2040.3%200%200%200-17.884-4.15%2040.13%2040.13%200%200%200-22.157%206.625%2040.2%2040.2%200%200%200-14.832%2017.758%2050.6%2050.6%200%200%200-11.572%203.495%2040.62%2040.62%200%200%200-18.853%2019.14%2040.67%2040.67%200%200%200-2.794%2026.733%2040.65%2040.65%200%200%200%2014.487%2022.632%2040.58%2040.58%200%200%200%2025.431%208.631%2040.6%2040.6%200%200%200%2013.692%2011.96%2040.6%2040.6%200%200%200%2017.532%204.784h1.258a30%2030%200%200%200%2013.602-3.292%2036.5%2036.5%200%200%200%2013.514%205.79%2036.52%2036.52%200%200%200%2028.207-5.815%2036.6%2036.6%200%200%200%2010.129-10.663%2043.94%2043.94%200%200%200%2022.229-6.421%2044%2044%200%200%200%2015.897-16.826%2032.54%2032.54%200%200%200%203.248-22.108m-8.689%2019.345a37.6%2037.6%200%200%201-14.283%2014.831%2037.6%2037.6%200%200%201-19.945%205.083h-1.949l-1.056%201.381a30.4%2030.4%200%200%201-12.18%2012.192%2030.96%2030.96%200%200%201-32.767-3.048l-1.746-1.341-1.867%201.138a23.5%2023.5%200%200%201-12.181%203.455h-1.056a34.1%2034.1%200%200%201-15.497-4.408%2034.1%2034.1%200%200%201-11.747-11.036l-1.056-1.625h-5.359a34.17%2034.17%200%200%201-18.69-5.498%2034.2%2034.2%200%200%201-12.656-14.823%2033.7%2033.7%200%200%201-2.883-13.614%2034.3%2034.3%200%200%201%205.506-18.699%2034.3%2034.3%200%200%201%2014.796-12.676%2046%2046%200%200%201%2011.937-3.17l1.868-.243.65-1.748a34.5%2034.5%200%200%201%2010.124-14.032%2034.46%2034.46%200%200%201%2015.658-7.345%2037.5%2037.5%200%200%201%206.009-.528%2034%2034%200%200%201%2015.808%203.862%2034%2034%200%200%201%2012.208%2010.768l1.096%201.585%201.909-.284a24.34%2024.34%200%200%201%2014.495%202.642%2034.18%2034.18%200%200%201%2016.728%2021.58l.569%202.072%202.111.285a23.34%2023.34%200%200%201%2015.307%208.656%2010.55%2010.55%200%200%200%2013.115%202.479%206.53%206.53%200%200%201%205.644-.528%206.4%206.4%200%200%201%202.609%201.758%206.4%206.4%200%200%201%201.451%202.794%2026.2%2026.2%200%200%201-2.68%2017.881z%22%20fill%3D%22%2341B883%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M193.869%20113.056a13.5%2013.5%200%200%200-6.736-4.845%2013.5%2013.5%200%200%200-8.3.012%203.12%203.12%200%200%201-2.829-.494%203.13%203.13%200%200%201-1.234-2.592%2024.37%2024.37%200%200%200-12.964-22.172%2014.43%2014.43%200%200%200-11.215-1.015c0%20.447.284.812.365%201.218a20.82%2020.82%200%200%201-8.598%2022.436%2020.85%2020.85%200%200%201-7.859%203.188%2024%2024%200%200%201-3.78.325%2020.8%2020.8%200%200%201-11.662-3.696%2020.6%2020.6%200%200%201-7.64-9.867%203.12%203.12%200%200%201%20.288-2.589%203.13%203.13%200%200%201%202.15-1.472%203.21%203.21%200%200%201%203.535%202.03%2014.26%2014.26%200%200%200%205.121%206.579%2014.5%2014.5%200%200%200%205.486%202.389%2014.5%2014.5%200%200%200%2011.443-2.487%2014.5%2014.5%200%200%200%203.999-4.45%2018.5%2018.5%200%200%200%20.934-12.873l-.487-1.34a24.38%2024.38%200%200%200-9.979-12.562%2024.4%2024.4%200%200%200-30.14%203.214%2024.36%2024.36%200%200%200-7.101%2014.383%203.25%203.25%200%200%201-3.21%202.68A35.1%2035.1%200%200%200%2078.42%2091.98a24.62%2024.62%200%200%200-12.615%2013.148%2024.6%2024.6%200%200%200-.112%2018.215%2024.62%2024.62%200%200%200%2012.453%2013.301%2024.64%2024.64%200%200%200%2018.195%201.101h.65a15.02%2015.02%200%200%200%209.875-14.131%2014.37%2014.37%200%200%200-6.137-11.736%203.17%203.17%200%200%201-1.097-4.061%203.33%203.33%200%200%201%202.926-1.868%203%203%200%200%201%201.707.528%2020.96%2020.96%200%200%201%208.981%2016.243%2021.24%2021.24%200%200%201-11.663%2019.573%2024.67%2024.67%200%200%200%2020.928%2013.441%2014.63%2014.63%200%200%200%2012.8-6.334%203.24%203.24%200%200%201%202.682-1.422%203.13%203.13%200%200%201%202.642%201.462%2020.575%2020.575%200%200%200%2031.331%204.103%2020.55%2020.55%200%200%200%206.014-10.194%2020.3%2020.3%200%200%200-.853-12.182%2012.19%2012.19%200%200%200-14.101-8.122%2011.95%2011.95%200%200%200-7.396%204.954%203.29%203.29%200%200%201-3.861%201.34%203.21%203.21%200%200%201-2.113-3.005c.01-.544.164-1.077.447-1.543a18.8%2018.8%200%200%201%206.908-6.416%2018.3%2018.3%200%200%201%2013.884-1.328%2018.28%2018.28%200%200%201%2010.783%208.841%2026.74%2026.74%200%200%201%202.926%2015.634%2028.09%2028.09%200%200%200%2028.445-14.619%2016.5%2016.5%200%200%200%201.951-7.431%2020.32%2020.32%200%200%201-21.131-6.416%22%20fill%3D%22%2341B883%22%2F%3E%3Cdefs%3E%3Cfilter%20id%3D%22a%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22281%22%20height%3D%22225%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%3CfeColorMatrix%20in%3D%22SourceAlpha%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200%22%20result%3D%22hardAlpha%22%2F%3E%3CfeOffset%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%2225%22%2F%3E%3CfeComposite%20in2%3D%22hardAlpha%22%20operator%3D%22out%22%2F%3E%3CfeColorMatrix%20values%3D%220%200%200%200%200.254902%200%200%200%200%200.721569%200%200%200%200%200.513726%200%200%200%201%200%22%2F%3E%3CfeBlend%20in2%3D%22BackgroundImageFix%22%20result%3D%22effect1_dropShadow_42_2%22%2F%3E%3CfeBlend%20in%3D%22SourceGraphic%22%20in2%3D%22effect1_dropShadow_42_2%22%20result%3D%22shape%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3C%2Fsvg%3E') !important;
+
+}
+
+
+.monaco-workbench.vs-dark
+  .part.editor
+  > .content
+  .editor-group-container
+  .editor-group-watermark
+  > .letterpress {
+  height: 300px !important;
+  width: 600px !important;
+}
