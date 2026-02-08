@@ -1,27 +1,25 @@
 {
-	"Line seperator comment": {
-		"prefix": "line-seperator",
-		"body": [
-			"/* ----------------------------------------------------------------------------------------------- */",
-			"$2"
-		],
-		"description": "Create a line that seperate a block of code"
-	},
-    "Small line seperator": {
-		"prefix": "line-small-seperator",
-		"body": [
-			"/* -------------------------------- */"
-		],
-		"description": "Create a line that seperate a block of code"
-	},
-    "Block title comment": {
-		"prefix": "line-block-title",
-		"body": [
-			"/* -----------------------------------------------------------------------------------------------",
-            " * $1",
-            " * -----------------------------------------------------------------------------------------------*/",
-			"$2"
-		],
-		"description": "Create a title block comment"
-    }
+  "Line seperator comment": {
+    "prefix": "line-seperator",
+    "body": [
+      "/* ----------------------------------------------------------------------------------------------- */",
+      "$2"
+    ],
+    "description": "Create a line that seperate a block of code"
+  },
+  "Small line seperator": {
+    "prefix": "line-small-seperator",
+    "body": ["/* -------------------------------- */"],
+    "description": "Create a line that seperate a block of code"
+  },
+  "Block title comment": {
+    "prefix": "line-block-title",
+    "body": [
+      "/* -----------------------------------------------------------------------------------------------",
+      " * $1",
+      " * -----------------------------------------------------------------------------------------------*/",
+      "$2"
+    ],
+    "description": "Create a title block comment"
+  }
 }
