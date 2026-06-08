@@ -32,7 +32,3 @@ My VS Code settings.
 
 ## Alacritty themes
 - Using official alacritty themes
-
-# Screenshots
-![screenshot](ss-02.png)<br/>
-![screenshot](ss-01.png)<br/>
