@@ -4,24 +4,33 @@ return {
     event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
-
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
   },
+
+  -- test new blink
+  -- { import = "nvchad.blink.lazyspec" },
+
   {
-    "github/copilot.vim",
-    lazy = false,
-  },
-  {
-    "windwp/nvim-ts-autotag",
-    event = "InsertEnter",
-    config = function()
-      require("nvim-ts-autotag").setup()
-    end,
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        "go",
+        "rust",
+      },
+    },
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -41,32 +50,16 @@ return {
           "%.git",
           "%.next",
           "%.cache",
+          "yarn.lock",
+          "pnpm.lock",
+          "package-lock.json",
         },
-        -- vimgrep_arguments = {
-        --   "rg",
-        --   "--color=never",
-        --   "--no-heading",
-        --   "--with-filename",
-        --   "--line-number",
-        --   "--column",
-        --   "--smart-case",
-        --   "--glob=!node_modules/**"
-        -- }
       },
     },
   },
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
   {
     "nvim-tree/nvim-tree.lua",
     opts = {
@@ -90,17 +83,8 @@ return {
         ignore = true,
       },
       view = {
-        -- side = "right",
         float = {
           enable = true,
-          -- open_win_config = {
-          --   relative = "editor",
-          --   border = "rounded",
-          --   width = 30,
-          --   height = 30,
-          --   row = 1,
-          --   col = 1,
-          -- },
           open_win_config = function()
             local screen_w = vim.opt.columns:get()
             local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
@@ -129,5 +113,18 @@ return {
     opts = {
       delay = 1000,
     },
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact",
+      "html",
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
 }

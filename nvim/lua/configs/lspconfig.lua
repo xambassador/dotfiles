@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "ts_ls", "gopls" }
+local servers = { "html", "cssls", "vtsls", "gopls" }
 vim.lsp.config("gopls", {
   settings = {
     gopls = {
