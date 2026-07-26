@@ -1,5 +1,4 @@
 -- Docs: https://github.com/mfussenegger/nvim-lint
-
 local lint = require "lint"
 
 local eslint_configs = {
@@ -30,10 +29,21 @@ local js_fts = {
   typescriptreact = true,
 }
 
--- Run linters on buffer enter, after write, and when leaving insert mode.
--- We manually build the linter list instead of using linters_by_ft so we can
--- apply per-linter conditions based on config file presence.
--- Docs: https://neovim.io/doc/user/lua.html#vim.fs.root()
+lint.linters.eslint.cmd = function()
+  local dir = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h")
+  local bin = dir .. "/node_modules/.bin/eslint"
+  if vim.uv.fs_stat(bin) then
+    return bin
+  end
+  for parent in vim.fs.parents(dir) do
+    bin = parent .. "/node_modules/.bin/eslint"
+    if vim.uv.fs_stat(bin) then
+      return bin
+    end
+  end
+  return "eslint"
+end
+
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
   callback = function()
     local ft = vim.bo.filetype

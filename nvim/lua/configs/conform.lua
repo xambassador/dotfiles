@@ -1,6 +1,4 @@
 -- Docs: https://github.com/stevearc/conform.nvim#formatters
-
--- Prettier is only enabled when a config file is found in the project root.
 local prettier_configs = {
   ".prettierrc",
   ".prettierrc.js",
@@ -16,7 +14,6 @@ local prettier_configs = {
   "prettier.config.mjs",
 }
 
--- oxfmt is only enabled when a config file is found in the project root.
 local oxc_configs = {
   "oxc.config.json",
   ".oxfmtrc.json",
@@ -24,22 +21,38 @@ local oxc_configs = {
   "oxfmt.config.ts",
 }
 
--- Walks up from the current buffer's directory looking for any of the given
--- config files. Returns true only if one is found, otherwise the formatter is skipped.
--- Uses vim.fs.root: https://neovim.io/doc/user/lua.html#vim.fs.root()
 local function has_config(files)
   return function(_, ctx)
     return vim.fs.root(ctx.buf, files) ~= nil
   end
 end
 
+local function local_bin_or_global(name)
+  return function(_, ctx)
+    local bin = ctx.dirname .. "/node_modules/.bin/" .. name
+    if vim.uv.fs_stat(bin) then
+      return bin
+    end
+    for parent in vim.fs.parents(ctx.dirname) do
+      bin = parent .. "/node_modules/.bin/" .. name
+      if vim.uv.fs_stat(bin) then
+        return bin
+      end
+    end
+    return name
+  end
+end
+
+local no_format_on_save_fts = {
+  json = true,
+  jsonc = true,
+  markdown = true,
+}
+
 local options = {
-  -- Docs: https://github.com/stevearc/conform.nvim#options
   formatters_by_ft = {
     lua = { "stylua" },
     go = { "goimports" },
-    css = { "prettier" },
-    html = { "prettier" },
     javascript = { "oxfmt", "prettier", stop_after_first = true },
     typescript = { "oxfmt", "prettier", stop_after_first = true },
     javascriptreact = { "oxfmt", "prettier", stop_after_first = true },
@@ -49,19 +62,25 @@ local options = {
   formatters = {
     prettier = {
       condition = has_config(prettier_configs),
+      command = local_bin_or_global "prettier",
     },
     oxfmt = {
-      command = "oxfmt",
+      command = local_bin_or_global "oxfmt",
       args = { "--stdin-filepath", "$FILENAME" },
       stdin = true,
       condition = has_config(oxc_configs),
     },
   },
 
-  format_on_save = {
-    timeout_ms = 500,
-    lsp_fallback = true,
-  },
+  format_on_save = function(bufnr)
+    if no_format_on_save_fts[vim.bo[bufnr].filetype] then
+      return nil
+    end
+    return {
+      timeout_ms = 2000,
+      lsp_fallback = true,
+    }
+  end,
 }
 
 return options
